@@ -5,10 +5,10 @@ html(lang='en')
 
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description', content='HAIPHONG MEDIA LTD - Premier Media Production & Digital Strategy Agency based in London, UK.')
+        meta(name='description', content='HAIPHONG MEDIA LTD - Premier Visual Production & Digital Architecture House based in London, UK.')
         meta(name='author', content='HAIPHONG MEDIA LTD')
 
-        title HAIPHONG MEDIA LTD | Elite Media Production
+        title HAIPHONG MEDIA LTD | Elite Cinematic Production
 
         // Favicon
         link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
@@ -26,14 +26,151 @@ html(lang='en')
         // Core theme CSS (includes Bootstrap)
         link(href='css/styles.css', rel='stylesheet')
 
+        // High-End Custom Global Overrides (Triệt tiêu hoàn toàn màu cam cũ của template)
+        style.
+            :root {
+                --luxury-black: #0a0a0c;
+                --luxury-dark: #121215;
+                --luxury-card: #1a1a1e;
+                --luxury-silver: #86868b;
+                --luxury-light: #f5f5f7;
+                --pure-white: #ffffff;
+            }
+            body {
+                background-color: var(--luxury-black);
+                color: var(--pure-white);
+            }
+            #mainNav {
+                background-color: transparent !important;
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                transition: all 0.4s ease;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            }
+            #mainNav.navbar-shrink {
+                background-color: rgba(10, 10, 12, 0.95) !important;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            }
+            #mainNav .navbar-brand {
+                color: var(--pure-white) !important;
+                font-weight: 700 !important;
+                letter-spacing: 2px;
+            }
+            #mainNav .nav-link {
+                color: rgba(255, 255, 255, 0.7) !important;
+                font-weight: 600 !important;
+                letter-spacing: 1px;
+                font-size: 0.85rem;
+            }
+            #mainNav .nav-link:hover {
+                color: var(--pure-white) !important;
+            }
+            .masthead {
+                background: linear-gradient(180deg, #020202 0%, var(--luxury-dark) 100%) !important;
+                padding-top: 12rem !important;
+                padding-bottom: 12rem !important;
+            }
+            h1, h2, h3, h4 {
+                letter-spacing: 0.5px !important;
+            }
+            hr.divider {
+                border-color: var(--pure-white) !important;
+                background-color: var(--pure-white) !important;
+                max-width: 2.5rem !important;
+                height: 1px !important;
+                opacity: 0.3 !important;
+                margin: 2rem auto !important;
+            }
+            hr.divider-dark {
+                border-color: var(--luxury-black) !important;
+                background-color: var(--luxury-black) !important;
+                max-width: 2.5rem !important;
+                height: 1px !important;
+                opacity: 0.2 !important;
+                margin: 2rem auto !important;
+            }
+            .btn-xl {
+                padding: 1.25rem 2.75rem !important;
+                font-size: 0.8rem !important;
+                font-weight: 700 !important;
+                text-transform: uppercase !important;
+                letter-spacing: 2px !important;
+                border-radius: 0px !important;
+                transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+            }
+            .btn-editorial-dark {
+                background-color: var(--luxury-black) !important;
+                color: var(--pure-white) !important;
+                border: 1px solid var(--luxury-black) !important;
+            }
+            .btn-editorial-dark:hover {
+                background-color: transparent !important;
+                color: var(--luxury-black) !important;
+            }
+            .btn-outline-custom {
+                background-color: transparent !important;
+                color: var(--pure-white) !important;
+                border: 1px solid rgba(255, 255, 255, 0.3) !important;
+            }
+            .btn-outline-custom:hover {
+                border-color: var(--pure-white) !important;
+                background-color: var(--pure-white) !important;
+                color: var(--luxury-black) !important;
+            }
+            .service-icon-box {
+                color: var(--luxury-black) !important;
+                font-size: 2.5rem;
+                margin-bottom: 1.5rem;
+                display: inline-block;
+            }
+            .portfolio-card {
+                background-color: var(--luxury-card);
+                border: 1px solid rgba(255, 255, 255, 0.03);
+                border-radius: 0px;
+                transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+            .portfolio-card:hover {
+                transform: translateY(-8px);
+                border-color: rgba(255, 255, 255, 0.15);
+                box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+            }
+            .platform-icon {
+                font-size: 2.25rem;
+                opacity: 0.85;
+                transition: transform 0.3s ease;
+            }
+            .portfolio-card:hover .platform-icon {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+            .contact-card {
+                background-color: var(--luxury-light);
+                border: none;
+                border-radius: 0px;
+                transition: transform 0.3s ease;
+            }
+            .contact-card:hover {
+                transform: translateY(-4px);
+            }
+            .icon-wrapper-contact {
+                width: 50px;
+                height: 50px;
+                background-color: var(--pure-white);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            }
+
     body#page-top
 
         // Navigation
         nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top.py-3
             .container.px-4.px-lg-5
-                a.navbar-brand(href='#page-top', style='font-weight: 700; letter-spacing: 0.5px;') HAIPHONG MEDIA LTD
-                button.navbar-toggler.navbar-toggler-right(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
-                    span.navbar-toggler-icon
+                a.navbar-brand(href='#page-top') HAIPHONG MEDIA LTD
+                button.navbar-toggler.navbar-toggler-right(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation', style='border: none; color: white;')
+                    span.navbar-toggler-icon(style='filter: invert(1);')
                 #navbarResponsive.collapse.navbar-collapse
                     ul.navbar-nav.ms-auto.my-2.my-lg-0
                         li.nav-item
@@ -41,167 +178,167 @@ html(lang='en')
                         li.nav-item
                             a.nav-link(href='#services') Services
                         li.nav-item
-                            a.nav-link(href='#portfolio') Portfolio
+                            a.nav-link(href='#portfolio') Ecosystems
                         li.nav-item
                             a.nav-link(href='#contact') Contact
 
-        // Masthead (Premium Titanium Gradient)
-        header.masthead(style="background: linear-gradient(135deg, #1a1c1e 0%, #0f1011 100%); position: relative;")
+        // Header / Masthead
+        header.masthead
             .container.px-4.px-lg-5.h-100
                 .row.gx-4.gx-lg-5.h-100.align-items-center.justify-content-center.text-center
-                    .col-lg-8.align-self-end
-                        h1.text-white.font-weight-bold(style="letter-spacing: 1px; line-height: 1.2;") INSPIRING VISUAL MASTERPIECES FOR THE DIGITAL ERA
-                        hr.divider(style="border-color: #ffffff; max-width: 3.5rem; height: 0.2rem; opacity: 0.8; margin: 1.5rem auto;")
+                    .col-lg-10.align-self-end
+                        h1.text-white.font-weight-bold(style="font-size: calc(1.8rem + 1.5vw); font-family: 'Merriweather Sans', sans-serif;") VISUAL ARCHITECTURE FOR THE DIGITAL FRONTIER
+                        hr.divider
                     .col-lg-8.align-self-baseline
-                        p.text-white-75.mb-5(style="font-weight: 300; font-size: 1.15rem;") High-impact video production, next-generation creative technology, and powerful cinematic storytelling designed to elevate premium brands worldwide.
-                        a.btn.btn-outline-light.btn-xl.shadow-sm(href='#about', style="font-weight: 600; letter-spacing: 1px; padding: 1.25rem 2.25rem; border-width: 2px;") DISCOVER OUR WORK
+                        p.text-white-75.mb-5(style="font-weight: 300; font-size: 1.1rem; letter-spacing: 0.5px; opacity: 0.8; line-height: 1.7;") Executive-level video production, cutting-edge creative technologies, and disruptive platform narratives engineered for the world's most ambitious brands.
+                        a.btn.btn-outline-custom.btn-xl(href='#about') Enter Agency
 
-        // About (Chuyển sang khối Trắng/Xám tinh tế, loại bỏ khối màu cam quê mùa)
-        section#about.page-section(style="background-color: #ffffff; color: #111315;")
+        // About (Editorial Light Architecture)
+        section#about.page-section(style="background-color: var(--pure-white); color: var(--luxury-black); padding: 9rem 0;")
             .container.px-4.px-lg-5
                 .row.gx-4.gx-lg-5.justify-content-center
-                    .col-lg-8.text-center
-                        h2.font-weight-bold.mt-0(style="color: #111315; letter-spacing: 0.5px;") Shaping Global Perspectives
-                        hr.divider(style="border-color: #111315; max-width: 3.5rem; height: 0.2rem; opacity: 1; margin: 1.5rem auto;")
-                        p.text-muted.mb-5(style="font-size: 1.1rem; line-height: 1.8; font-weight: 400;") Based in London, HAIPHONG MEDIA LTD is an elite visual production house. We seamlessly blend traditional cinematic craftsmanship with vanguard digital intelligence to engineer breathtaking visual landscapes. From compelling commercial narratives to hyper-realistic multi-platform assets, we empower visionaries to lead industry trends and captivate modern audiences.
-                        a.btn.btn-dark.btn-xl.shadow-sm(href='#services', style="background-color: #111315; border: none; padding: 1.25rem 2.25rem; font-weight: 600;") OUR CORE CAPABILITIES
+                    .col-lg-9.text-center
+                        h2.font-weight-bold.mt-0(style="font-size: 2.25rem; font-family: 'Merriweather', serif;") Cinematic Precision meets Digital Intelligence.
+                        hr.divider-dark
+                        p.text-muted.mb-5(style="font-size: 1.15rem; line-height: 1.9; font-weight: 300; text-align: justify; text-align-last: center;") Headquartered in London, HAIPHONG MEDIA LTD operates at the convergence of world-class cinematic craftsmanship and vanguard media engineering. We build high-fidelity visual assets, automated content architectures, and retentive media frameworks. We don't just output video—we establish digital authority and accelerate global market influence.
+                        a.btn.btn-editorial-dark.btn-xl.shadow-sm(href='#services') View Expertise
 
-        // Services (Nền Xám ngọc trai nhẹ, Icon Đen sang trọng)
-        section#services.page-section(style="background-color: #f8f9fa;")
+        // Services (Minimalist Structural Grid)
+        section#services.page-section(style="background-color: var(--luxury-light); color: var(--luxury-black); padding: 9rem 0;")
             .container.px-4.px-lg-5
-                h2.text-center.font-weight-bold.mt-0(style="color: #111315;") Premium Ecosystem
-                hr.divider(style="border-color: #111315; max-width: 3.5rem; height: 0.2rem; opacity: 1; margin: 1.5rem auto;")
+                h2.text-center.font-weight-bold.mt-0(style="font-size: 2.25rem;") Core Capabilities
+                hr.divider-dark
                 .row.gx-4.gx-lg-5
                     .col-lg-3.col-md-6.text-center
                         .mt-5
-                            .mb-3
-                                i.bi-camera-video.fs-1(style="color: #111315;")
-                            h3.h5.font-weight-bold.mb-2(style="color: #111315;") Video Production
-                            p.text-muted.mb-0.small(style="line-height: 1.6;") High-end brand documentaries, premium commercials, and artistic content built to engage and convert.
+                            .service-icon-box
+                                i.bi-camera-video
+                            h3.h5.font-weight-bold.mb-3 Video Production
+                            p.text-muted.mb-0.small(style="line-height: 1.7; font-weight: 400;") Premium commercial execution, elite brand documentaries, and bespoke masterwork narratives.
                     .col-lg-3.col-md-6.text-center
                         .mt-5
-                            .mb-3
-                                i.bi-cpu.fs-1(style="color: #111315;")
-                            h3.h5.font-weight-bold.mb-2(style="color: #111315;") Creative Tech
-                            p.text-muted.mb-0.small(style="line-height: 1.6;") Utilizing high-fidelity rendering systems, advanced virtual animations, and cutting-edge media asset pipelines.
+                            .service-icon-box
+                                i.bi-cpu
+                            h3.h5.font-weight-bold.mb-3 Creative Engineering
+                            p.text-muted.mb-0.small(style="line-height: 1.7; font-weight: 400;") Synthesizing advanced rendering pipelines, next-gen virtual environments, and custom media assets.
                     .col-lg-3.col-md-6.text-center
                         .mt-5
-                            .mb-3
-                                i.bi-magic.fs-1(style="color: #111315;")
-                            h3.h5.font-weight-bold.mb-2(style="color: #111315;") Post-Production
-                            p.text-muted.mb-0.small(style="line-height: 1.6;") Executive-level color grading, seamless visual effects (VFX), and tailored spatial acoustic engineering.
+                            .service-icon-box
+                                i.bi-magic
+                            h3.h5.font-weight-bold.mb-3 Advanced Mastering
+                            p.text-muted.mb-0.small(style="line-height: 1.7; font-weight: 400;") High-end color precision grading, seamless visual VFX integrations, and localized sound design.
                     .col-lg-3.col-md-6.text-center
                         .mt-5
-                            .mb-3
-                                i.bi-graph-up-arrow.fs-1(style="color: #111315;")
-                            h3.h5.font-weight-bold.mb-2(style="color: #111315;") Dynamic Strategy
-                            p.text-muted.mb-0.small(style="line-height: 1.6;") Performance-driven cross-platform architecture to accelerate reach, retention, and digital dominance.
+                            .service-icon-box
+                                i.bi-graph-up-arrow
+                            h3.h5.font-weight-bold.mb-3 Network Architecture
+                            p.text-muted.mb-0.small(style="line-height: 1.7; font-weight: 400;") Data-informed cross-platform publishing models designed to optimize reach, engagement, and scaling metrics.
 
-        // Portfolio (Bento Grid tinh tế trên nền tối Deep Midnight)
-        section#portfolio.page-section(style="background-color: #0f1011; color: #ffffff;")
+        // Portfolio (Premium Obsidian Bento Card Grid)
+        section#portfolio.page-section(style="background-color: var(--luxury-black); padding: 9rem 0;")
             .container.px-4.px-lg-5
                 .text-center.mb-5
-                    h2.font-weight-bold.mt-0.text-white Platform Ecosystems
-                    hr.divider(style="border-color: #ffffff; max-width: 3.5rem; height: 0.2rem; opacity: 0.8; margin: 1.5rem auto;")
-                    p.text-white-50.fs-6 Engineered for flawless optimization and native impact across leading global networks.
+                    h2.font-weight-bold.mt-0.text-white Native Optimization
+                    hr.divider
+                    p.text-white-50(style="font-size: 1.05rem; font-weight: 300;") Seamless deployment frameworks across core global digital networks.
                 
                 .row.gx-4.gx-lg-5.justify-content-center
                     // YouTube
                     .col-lg-4.col-md-6.mb-4
-                        .card.border-0.shadow.h-100.text-center.p-4.rounded-3.bg-white(style="transition: transform 0.2s;")
-                            .card-body.d-flex.flex-column.justify-content-center.align-items-center
-                                i.bi-youtube.fs-2.text-danger.mb-3
-                                h3.h5.font-weight-bold.mb-2(style="color: #111315;") YouTube Strategy
-                                p.text-muted.small.mb-0 Cinematic documentary assets and authority positioning.
+                        .card.portfolio-card.h-100.text-center.p-4
+                            .card-body.d-flex.flex-column.justify-content-center.align-items-center.py-4
+                                i.bi-youtube.platform-icon.text-danger.mb-3
+                                h3.h5.text-white.font-weight-bold.mb-2 YouTube Engine
+                                p.text-muted.small.mb-0(style="font-weight: 300;") Long-form cinematic content and retentive positioning.
                     
                     // Facebook
                     .col-lg-4.col-md-6.mb-4
-                        .card.border-0.shadow.h-100.text-center.p-4.rounded-3.bg-white
-                            .card-body.d-flex.flex-column.justify-content-center.align-items-center
-                                i.bi-facebook.fs-2.mb-3(style="color: #1877F2;")
-                                h3.h5.font-weight-bold.mb-2(style="color: #111315;") Facebook Networks
-                                p.text-muted.small.mb-0 Highly targeted advertising models and community growth.
+                        .card.portfolio-card.h-100.text-center.p-4
+                            .card-body.d-flex.flex-column.justify-content-center.align-items-center.py-4
+                                i.bi-facebook.platform-icon.mb-3(style="color: #1877F2;")
+                                h3.h5.text-white.font-weight-bold.mb-2 Facebook Synergies
+                                p.text-muted.small.mb-0(style="font-weight: 300;") Dynamic commercial campaigns and high-reach scaling.
                     
                     // TikTok
                     .col-lg-4.col-md-6.mb-4
-                        .card.border-0.shadow.h-100.text-center.p-4.rounded-3.bg-white
-                            .card-body.d-flex.flex-column.justify-content-center.align-items-center
-                                i.bi-tiktok.fs-2.text-dark.mb-3
-                                h3.h5.font-weight-bold.mb-2(style="color: #111315;") TikTok Production
-                                p.text-muted.small.mb-0 Retentive micro-content mapping and trend forecasting.
+                        .card.portfolio-card.h-100.text-center.p-4
+                            .card-body.d-flex.flex-column.justify-content-center.align-items-center.py-4
+                                i.bi-tiktok.platform-icon.text-white.mb-3
+                                h3.h5.text-white.font-weight-bold.mb-2 TikTok Frameworks
+                                p.text-muted.small.mb-0(style="font-weight: 300;") Retentive vertical narrative mapping and rapid micro-production.
                     
                     // Instagram
                     .col-lg-4.col-md-6.mb-4
-                        .card.border-0.shadow.h-100.text-center.p-4.rounded-3.bg-white
-                            .card-body.d-flex.flex-column.justify-content-center.align-items-center
-                                i.bi-instagram.fs-2.mb-3(style="color: #E1306C;")
-                                h3.h5.font-weight-bold.mb-2(style="color: #111315;") Instagram Aesthetics
-                                p.text-muted.small.mb-0 Premium visual identity and high-engagement reels.
+                        .card.portfolio-card.h-100.text-center.p-4
+                            .card-body.d-flex.flex-column.justify-content-center.align-items-center.py-4
+                                i.bi-instagram.platform-icon.mb-3(style="color: #E1306C;")
+                                h3.h5.text-white.font-weight-bold.mb-2 Instagram Aesthetics
+                                p.text-muted.small.mb-0(style="font-weight: 300;") Premium visual styling and high-converting reels pipelines.
                     
                     // Twitter-X
                     .col-lg-4.col-md-6.mb-4
-                        .card.border-0.shadow.h-100.text-center.p-4.rounded-3.bg-white
-                            .card-body.d-flex.flex-column.justify-content-center.align-items-center
-                                i.bi-twitter-x.fs-2.text-dark.mb-3
-                                h3.h5.font-weight-bold.mb-2(style="color: #111315;") X Communications
-                                p.text-muted.small.mb-0 Real-time authority narratives and direct network outreach.
+                        .card.portfolio-card.h-100.text-center.p-4
+                            .card-body.d-flex.flex-column.justify-content-center.align-items-center.py-4
+                                i.bi-twitter-x.platform-icon.text-white.mb-3
+                                h3.h5.text-white.font-weight-bold.mb-2 X Communications
+                                p.text-muted.small.mb-0(style="font-weight: 300;") Real-time brand positioning and authoritative corporate narratives.
                     
                     // LinkedIn
                     .col-lg-4.col-md-6.mb-4
-                        .card.border-0.shadow.h-100.text-center.p-4.rounded-3.bg-white
-                            .card-body.d-flex.flex-column.justify-content-center.align-items-center
-                                i.bi-linkedin.fs-2.mb-3(style="color: #0077B5;")
-                                h3.h5.font-weight-bold.mb-2(style="color: #111315;") LinkedIn Corporate
-                                p.text-muted.small.mb-0 B2B high-value campaigns and executive brand influence.
+                        .card.portfolio-card.h-100.text-center.p-4
+                            .card-body.d-flex.flex-column.justify-content-center.align-items-center.py-4
+                                i.bi-linkedin.platform-icon.mb-3(style="color: #0077B5;")
+                                h3.h5.text-white.font-weight-bold.mb-2 LinkedIn Corporate
+                                p.text-muted.small.mb-0(style="font-weight: 300;") High-value B2B assets and corporate authority influence.
 
-        // Call to action
-        section.page-section.bg-dark.text-white(style="background: linear-gradient(135deg, #1a1c1e 0%, #0f1011 100%);")
+        // Action Section (Sleek Dark Accent)
+        section.page-section.text-white(style="background-color: var(--luxury-dark); padding: 7rem 0; border-top: 1px solid rgba(255,255,255,0.02);")
             .container.px-4.px-lg-5.text-center
-                h2.mb-4(style="font-weight: 600; letter-spacing: 0.5px;") Ready to scale your brand's presence?
-                a.btn.btn-outline-light.btn-xl(href='#contact', style="font-weight: 600; letter-spacing: 1px; padding: 1.25rem 2.25rem; border-width: 2px;") INITIATE YOUR BRIEF
+                h2.mb-4(style="font-weight: 400; letter-spacing: 1px;") Accelerate Your Global Footprint.
+                a.btn.btn-outline-custom.btn-xl(href='#contact') Initiate Production Brief
 
-        // Contact
-        section#contact.page-section(style="background-color: #ffffff; color: #111315;")
+        // Contact (Elite Studio Form/Data Grid)
+        section#contact.page-section(style="background-color: var(--pure-white); color: var(--luxury-black); padding: 9rem 0;")
             .container.px-4.px-lg-5
                 .row.gx-4.gx-lg-5.justify-content-center
-                    .col-lg-8.col-xl-6.text-center.mb-5
-                        h2.mt-0.font-weight-bold(style="color: #111315;") Let's Build Your Vision
-                        hr.divider(style="border-color: #111315; max-width: 3.5rem; height: 0.2rem; opacity: 1; margin: 1.5rem auto;")
-                        p.text-muted Partner with us to revolutionize your digital storytelling. Reach out today for corporate dynamic consulting, bespoke pricing models, or production booking.
+                    .col-lg-8.text-center.mb-5
+                        h2.mt-0.font-weight-bold(style="font-size: 2.25rem;") Strategic Engagement
+                        hr.divider-dark
+                        p.text-muted(style="font-size: 1.05rem; font-weight: 400;") Partner with our London creative team to architect high-end media pipelines. Reach out for corporate consulting, bespoke resource packaging, or project bookings.
                 
                 .row.gx-4.gx-lg-5.justify-content-center
                     // Phone Card
                     .col-lg-4.col-md-6.mb-4
-                        .card.border-0.shadow-sm.h-100.text-center.p-4.rounded-3(style="background-color: #f8f9fa;")
-                            .card-body.d-flex.flex-column.justify-content-center.align-items-center
-                                .mb-3.bg-white.shadow-sm.rounded-circle.d-flex.align-items-center.justify-content-center(style="width: 60px; height: 60px;")
-                                    i.bi-phone.fs-3(style="color: #111315;")
-                                h4.h5.font-weight-bold.mb-2(style="color: #111315;") Direct Line
-                                p.text-secondary.mb-0.font-weight-bold 07526000056
+                        .card.contact-card.h-100.text-center.p-4
+                            .card-body.d-flex.flex-column.justify-content-center.align-items-center.py-3
+                                .mb-3.icon-wrapper-contact
+                                    i.bi-phone.fs-4(style="color: var(--luxury-black);")
+                                h4.h6.font-weight-bold.mb-2 Direct Line
+                                p.mb-0(style="font-weight: 700; color: var(--luxury-black); letter-spacing: 0.5px;") 07526000056
                     
                     // Email Card
                     .col-lg-4.col-md-6.mb-4
-                        .card.border-0.shadow-sm.h-100.text-center.p-4.rounded-3(style="background-color: #f8f9fa;")
-                            .card-body.d-flex.flex-column.justify-content-center.align-items-center
-                                .mb-3.bg-white.shadow-sm.rounded-circle.d-flex.align-items-center.justify-content-center(style="width: 60px; height: 60px;")
-                                    i.bi-envelope.fs-3(style="color: #111315;")
-                                h4.h5.font-weight-bold.mb-2(style="color: #111315;") Global Press
+                        .card.contact-card.h-100.text-center.p-4
+                            .card-body.d-flex.flex-column.justify-content-center.align-items-center.py-3
+                                .mb-3.icon-wrapper-contact
+                                    i.bi-envelope.fs-4(style="color: var(--luxury-black);")
+                                h4.h6.font-weight-bold.mb-2 Corporate Press
                                 p.mb-0
-                                    a.text-decoration-none.font-weight-bold(href='mailto:contact@haiphongmedialtd.com', style="color: #111315;") contact@haiphongmedialtd.com
+                                    a.text-decoration-none(href='mailto:contact@haiphongmedialtd.com', style="font-weight: 700; color: var(--luxury-black);") contact@haiphongmedialtd.com
                     
                     // Address Card
                     .col-lg-4.col-md-8.mb-4
-                        .card.border-0.shadow-sm.h-100.text-center.p-4.rounded-3(style="background-color: #f8f9fa;")
-                            .card-body.d-flex.flex-column.justify-content-center.align-items-center
-                                .mb-3.bg-white.shadow-sm.rounded-circle.d-flex.align-items-center.justify-content-center(style="width: 60px; height: 60px;")
-                                    i.bi-geo-alt.fs-3(style="color: #111315;")
-                                h4.h5.font-weight-bold.mb-2(style="color: #111315;") Headquarters
-                                p.text-muted.mb-0.small 181 Pixton Way, Croydon, CR0 9JN, United Kingdom
+                        .card.contact-card.h-100.text-center.p-4
+                            .card-body.d-flex.flex-column.justify-content-center.align-items-center.py-3
+                                .mb-3.icon-wrapper-contact
+                                    i.bi-geo-alt.fs-4(style="color: var(--luxury-black);")
+                                h4.h6.font-weight-bold.mb-2 HQ Presence
+                                p.text-muted.mb-0.small(style="font-weight: 500; line-height: 1.5;") 181 Pixton Way, Croydon, CR0 9JN, United Kingdom
 
         // Footer
-        footer.py-4(style="background-color: #f8f9fa; border-top: 1px solid #e9ecef;")
+        footer.py-4(style="background-color: var(--luxury-light); border-top: 1px solid #e9ecef;")
             .container.px-4.px-lg-5
-                .small.text-center.text-muted Copyright &copy; 2026 - HAIPHONG MEDIA LTD
+                .small.text-center.text-muted(style="font-weight: 500; letter-spacing: 0.5px;") Copyright &copy; 2026 - HAIPHONG MEDIA LTD
 
         // Bootstrap core JS
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js')
