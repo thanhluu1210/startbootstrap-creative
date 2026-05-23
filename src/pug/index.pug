@@ -22,7 +22,7 @@ html(lang='en')
         // Core theme CSS
         link(href='css/styles.css', rel='stylesheet')
 
-        // STYLE INJECTION: CINEMATIC NEO-NOIR
+        // STYLE INJECTION: CINEMATIC NEO-NOIR W/ INTEGRATED IMAGERY
         style.
             body {
                 font-family: 'Plus Jakarta Sans', sans-serif !important;
@@ -54,6 +54,21 @@ html(lang='en')
             .masthead {
                 background: radial-gradient(circle at top right, #1d153a 0%, #070709 60%) !important;
                 padding: 14rem 0 12rem 0 !important;
+                position: relative;
+                overflow: hidden;
+            }
+            /* Thêm hiệu ứng hạt ánh sáng nhẹ ở Masthead */
+            .masthead::before {
+                content: '';
+                position: absolute;
+                top: 0; left: 0; width: 100%; height: 100%;
+                background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+                opacity: 0.1;
+                z-index: 0;
+            }
+            .masthead .container {
+                position: relative;
+                z-index: 1;
             }
             h1 {
                 font-size: calc(2rem + 2vw) !important;
@@ -64,7 +79,7 @@ html(lang='en')
                 -webkit-text-fill-color: transparent;
             }
             hr.divider, hr.divider-dark {
-                display: none !important; /* Loại bỏ đường gạch ngang mặc định để tạo khoảng thoáng rộng rãi chuẩn hiện đại */
+                display: none !important;
             }
             .btn-xl {
                 padding: 1.2rem 2.5rem !important;
@@ -98,7 +113,7 @@ html(lang='en')
                 font-weight: 700 !important;
                 letter-spacing: -0.5px;
             }
-            /* Bento Grid Layout cho Portfolio */
+            /* Bento Grid Layout - Phá cách khối to nhỏ */
             .bento-grid {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
@@ -114,26 +129,48 @@ html(lang='en')
                 background: linear-gradient(145deg, #121216 0%, #0d0d11 100%);
                 border: 1px solid rgba(255, 255, 255, 0.03);
                 border-radius: 16px;
-                padding: 2.5rem;
+                padding: 2rem;
                 transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+                position: relative;
+                overflow: hidden;
             }
             .bento-card:hover {
                 transform: translateY(-5px);
                 border-color: rgba(229, 169, 59, 0.2);
                 box-shadow: 0 20px 40px rgba(0,0,0,0.5);
             }
-            /* Tạo khối to nhỏ khác nhau phá cách */
             .bento-large {
                 grid-column: span 2;
             }
             @media (max-width: 992px) {
                 .bento-large { grid-column: span 1; }
             }
+            /* Lớp phủ ảnh cho Bento Card */
+            .bento-img-overlay {
+                position: absolute;
+                top: 0; left: 0; width: 100%; height: 100%;
+                background-size: cover;
+                background-position: center;
+                opacity: 0.1; /* Chỉ hiện nhẹ làm nền */
+                transition: opacity 0.3s ease;
+                z-index: 0;
+            }
+            .bento-card:hover .bento-img-overlay {
+                opacity: 0.2; /* Sáng hơn khi hover */
+            }
+            .bento-card-content {
+                position: relative;
+                z-index: 1;
+            }
             .service-box-card {
                 background-color: #121216;
                 border: 1px solid rgba(255, 255, 255, 0.02);
                 padding: 3rem 2rem;
                 border-radius: 12px;
+                transition: all 0.3s ease;
+            }
+            .service-box-card:hover {
+                background-color: #1a1a21;
             }
             .service-icon {
                 font-size: 2.5rem;
@@ -217,7 +254,7 @@ html(lang='en')
                             h3.h5.font-weight-bold.mb-3 Strategy Models
                             p.text-white-50.small.mb-0 Data-informed cross-platform architecture to maximize target audience retention.
 
-        // Portfolio (Bento Box Layout)
+        // Portfolio (Bento Box Layout với hình ảnh tích hợp)
         section#portfolio.page-section(style="background-color: #0d0d11; padding: 10rem 0;")
             .container.px-4.px-lg-5
                 .mb-5
@@ -225,9 +262,10 @@ html(lang='en')
                     p.text-white-50 Flawless content deployment mechanics across global network ecosystems.
                 
                 .bento-grid
-                    // YouTube (Khối lớn)
+                    // YouTube (Khối lớn, có ảnh nền)
                     .bento-card.bento-large
-                        .d-flex.flex-column.h-100.justify-content-between
+                        .bento-img-overlay(style="background-image: url('https://images.unsplash.com/photo-1512070679279-8988d32161be?q=80&w=600');")
+                        .bento-card-content.d-flex.flex-column.h-100.justify-content-between
                             div
                                 i.bi-youtube.fs-1.text-danger.mb-4.d-block
                                 h3.h4.font-weight-bold.mb-3 YouTube Publishing Engine
@@ -240,15 +278,18 @@ html(lang='en')
                         h3.h4.font-weight-bold.mb-3 TikTok Networks
                         p.text-white-50 Retentive vertical micro-content mapping and rapid trend forecasting frameworks.
                     
-                    // Facebook
+                    // Facebook (Có ảnh nền)
                     .bento-card
-                        i.bi-facebook.fs-1.mb-4.d-block(style="color: #1877F2;")
-                        h3.h4.font-weight-bold.mb-3 Facebook Hubs
-                        p.text-white-50 Highly targeted native advertising assets and dynamic broad-reach content pipelines.
+                        .bento-img-overlay(style="background-image: url('https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=600');")
+                        .bento-card-content
+                            i.bi-facebook.fs-1.mb-4.d-block(style="color: #1877F2;")
+                            h3.h4.font-weight-bold.mb-3 Facebook Hubs
+                            p.text-white-50 Highly targeted native advertising assets and dynamic broad-reach content pipelines.
                     
-                    // LinkedIn (Khối lớn)
+                    // LinkedIn (Khối lớn, có ảnh nền)
                     .bento-card.bento-large
-                        .d-flex.flex-column.h-100.justify-content-between
+                        .bento-img-overlay(style="background-image: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=600');")
+                        .bento-card-content.d-flex.flex-column.h-100.justify-content-between
                             div
                                 i.bi-linkedin.fs-1.mb-4.d-block(style="color: #0077B5;")
                                 h3.h4.font-weight-bold.mb-3 LinkedIn Corporate
@@ -261,19 +302,30 @@ html(lang='en')
                         h3.h4.font-weight-bold.mb-3 Instagram Aesthetics
                         p.text-white-50 Premium visual design systems and organic high-converting reels structure.
                     
-                    // Twitter-X
+                    // Twitter-X (Có ảnh nền)
                     .bento-card
-                        i.bi-twitter-x.fs-1.text-white.mb-4.d-block
-                        h3.h4.font-weight-bold.mb-3 X Narratives
-                        p.text-white-50 Real-time industry authority positioning and direct network engagement assets.
+                        .bento-img-overlay(style="background-image: url('https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=600');")
+                        .bento-card-content
+                            i.bi-twitter-x.fs-1.text-white.mb-4.d-block
+                            h3.h4.font-weight-bold.mb-3 X Narratives
+                            p.text-white-50 Real-time industry authority positioning and direct network engagement assets.
+
+        // Call to Action with Background Image
+        section.page-section.text-white(style="background-image: url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1600'); background-size: cover; background-position: center; position: relative; padding: 10rem 0;")
+            // Lớp phủ tối cho ảnh nền
+            .cta-overlay(style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(7, 7, 9, 0.85); z-index: 0;")
+            .container.px-4.px-lg-5.text-center(style="position: relative; z-index: 1;")
+                h2.section-title Accelerate Your Global Footprint.
+                p.text-white-50.mt-3.mb-5(style="font-size: 1.1rem; font-weight: 300;") Partner with our London creative team to architect high-end media pipelines.
+                a.btn.btn-neon.btn-xl(href='#contact') Initiate Production Brief
 
         // Contact
-        section#contact.page-section(style="background-color: #070709; padding: 10rem 0;")
+        section#contact.page-section(style="background-color: #0d0d11; padding: 10rem 0;")
             .container.px-4.px-lg-5
                 .row.gx-4.gx-lg-5.justify-content-between.align-items-center
                     .col-lg-5.mb-5.mb-lg-0
                         h2.section-title Strategic Engagement
-                        p.text-white-50.mt-3 Architect your brand's digital dominance with our London creative facility. Contact us for bespoke pricing structures or active project bookings.
+                        p.text-white-50.mt-3 Partner with us to revolutionize your digital storytelling. Reach out today for corporate dynamic consulting or project bookings.
                     .col-lg-6
                         .row
                             .col-md-6.mb-4
