@@ -22,13 +22,13 @@ html(lang='en')
         // Core theme CSS
         link(href='css/styles.css', rel='stylesheet')
 
-        // STYLE INJECTION: LUXURY EDITORIAL (HERITAGE MODERN MODE)
+        // STYLE INJECTION: LUXURY ARCHITECTURAL MINIMALISM
         style.
             :root {
                 --bg-heritage: #fbf9f4; /* Royal Ivory Warm Canvas */
                 --bg-cream: #f4efe3;    /* Fine Linen/Champagne Accent */
                 --text-oxford: #111622; /* Deep Midnight Oxford Ink */
-                --text-editorial: #4a5264; /* Muted Slate Slate */
+                --text-editorial: #4a5264; /* Muted Slate Text */
                 --gold-brass: #b5893d;   /* Antique Classic Brass Gold */
                 --border-fine: #dfd7c2;  /* Thin Gallery Line border */
             }
@@ -55,7 +55,7 @@ html(lang='en')
             ::-webkit-scrollbar-thumb:hover {
                 background: var(--gold-brass);
             }
-            /* Navigation - Transparent Glass Editorial */
+            /* Navigation */
             #mainNav {
                 background-color: rgba(251, 249, 244, 0.9) !important;
                 backdrop-filter: blur(12px);
@@ -90,7 +90,7 @@ html(lang='en')
                 color: var(--gold-brass) !important;
                 opacity: 1;
             }
-            /* Hero Masthead - Prestige Gallery Studio Look */
+            /* Hero Masthead */
             .masthead {
                 background: var(--bg-heritage) !important;
                 padding: 20rem 0 16rem 0 !important;
@@ -121,14 +121,14 @@ html(lang='en')
             hr.divider, hr.divider-dark {
                 display: none !important;
             }
-            /* Editorial Premium Buttons */
+            /* Premium Buttons */
             .btn-xl {
                 padding: 1.3rem 2.8rem !important;
                 font-size: 0.75rem !important;
                 font-weight: 700 !important;
                 text-transform: uppercase !important;
                 letter-spacing: 2.5px !important;
-                border-radius: 0px !important; /* Sharp corners for classic museum luxury look */
+                border-radius: 0px !important;
                 transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1) !important;
             }
             .btn-neon {
@@ -171,7 +171,7 @@ html(lang='en')
                 display: inline-block;
                 margin-bottom: 1rem;
             }
-            /* Studio Capability Cards */
+            /* Capability Cards */
             .service-box-card {
                 background: var(--bg-heritage);
                 border: 1px solid var(--border-fine);
@@ -195,49 +195,53 @@ html(lang='en')
             .service-box-card:hover .service-icon {
                 color: var(--gold-brass);
             }
-            /* Bespoke Dynamic Lookbook Grid (Ecosystems Section) */
-            .lookbook-grid {
+            /* Premium Symmetric Ecosystem Grid */
+            .ecosystem-grid {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
-                gap: 2.5rem;
+                gap: 2rem;
             }
             @media (max-width: 992px) {
-                .lookbook-grid { grid-template-columns: repeat(2, 1fr); }
+                .ecosystem-grid { grid-template-columns: repeat(2, 1fr); }
             }
-            @media (max-width: 650px) {
-                .lookbook-grid { grid-template-columns: 1fr; }
+            @media (max-width: 768px) {
+                .ecosystem-grid { grid-template-columns: 1fr; }
             }
-            .lookbook-card {
+            .ecosystem-card {
                 background: #ffffff;
                 border: 1px solid var(--border-fine);
                 border-radius: 0px;
-                padding: 3.5rem 2.5rem;
-                min-height: 380px;
-                transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+                padding: 4rem 2.5rem;
+                min-height: 360px;
+                transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
                 position: relative;
                 display: flex;
-                flex-column: column;
+                flex-direction: column;
                 justify-content: space-between;
             }
-            .lookbook-card:hover {
-                transform: scale(1.02);
-                border-color: var(--text-oxford);
-                box-shadow: 0 30px 60px rgba(18,24,37,0.05);
-            }
-            /* Heritage Big Numbers */
-            .lookbook-number {
-                font-family: 'Cormorant Garamond', serif !important;
-                font-size: 3.5rem;
-                font-weight: 300;
-                color: var(--border-fine);
-                line-height: 1;
+            /* High-end line animation sliding from top border */
+            .ecosystem-card::before {
+                content: '';
                 position: absolute;
-                top: 2.5rem; right: 2.5rem;
-                transition: color 0.4s ease;
+                top: 0; left: 0; width: 0; height: 2px;
+                background-color: var(--gold-brass);
+                transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             }
-            .lookbook-card:hover .lookbook-number {
+            .ecosystem-card:hover {
+                transform: translateY(-6px);
+                border-color: var(--text-oxford);
+                box-shadow: 0 20px 45px rgba(18,24,37,0.04);
+            }
+            .ecosystem-card:hover::before {
+                width: 100%;
+            }
+            .ecosystem-tag {
+                font-size: 0.65rem;
+                text-transform: uppercase;
+                letter-spacing: 2px;
                 color: var(--gold-brass);
-                font-weight: 500;
+                font-weight: 700;
+                display: inline-block;
             }
             /* Contact UI Elements */
             .contact-block {
@@ -330,7 +334,7 @@ html(lang='en')
                             h3.h6.font-weight-bold.mb-3(style="letter-spacing: 1.5px; text-transform: uppercase; font-size: 0.8rem;") Strategy Models
                             p.small.mb-0(style="color: var(--text-editorial); line-height: 1.6; font-weight:400;") Data-informed cross-platform architecture to maximize target audience retention.
 
-        // Ecosystem Section - Lookbook Chapter Design (Modern meets Vintage)
+        // Ecosystem Section - Refined Architectural Grid Layout
         section#portfolio.page-section(style="background-color: var(--bg-heritage); padding: 13rem 0;")
             .container.px-4.px-lg-5
                 .mb-5.pb-4(style="border-bottom: 1px solid var(--border-fine);")
@@ -338,63 +342,69 @@ html(lang='en')
                     h2.section-title Native Optimization Systems
                     p.mt-1.mb-3(style="color: var(--text-editorial); font-weight: 400;") Flawless content deployment mechanics engineered across global networks.
                 
-                .lookbook-grid
+                .ecosystem-grid
                     // YouTube Engine
-                    .lookbook-card
-                        span.lookbook-number 01
+                    .ecosystem-card
                         .d-flex.flex-column.justify-content-between.h-100
                             div
-                                i.bi-youtube.fs-2.text-danger.mb-4.d-block
+                                .d-flex.justify-content-between.align-items-start.mb-4
+                                    i.bi-youtube.fs-2.text-danger
+                                    span.ecosystem-tag Publishing
                                 h3.h5.font-weight-bold.mb-3(style="color: var(--text-oxford);") YouTube Publishing Engine
                                 p.mb-0(style="color: var(--text-editorial); font-weight: 400; font-size: 0.95rem; line-height: 1.7;") Long-form cinematic documentaries, serialized structural formatting, and authority pipelines.
                             span.small.mt-5(style="color: var(--gold-brass); font-weight: 700; letter-spacing: 1px; font-size:0.7rem;") HIGH-RETENTION SYSTEMS
                     
                     // TikTok Networks
-                    .lookbook-card
-                        span.lookbook-number 02
+                    .ecosystem-card
                         .d-flex.flex-column.justify-content-between.h-100
                             div
-                                i.bi-tiktok.fs-2.text-dark.mb-4.d-block
+                                .d-flex.justify-content-between.align-items-start.mb-4
+                                    i.bi-tiktok.fs-2.text-dark
+                                    span.ecosystem-tag Short-Form
                                 h3.h5.font-weight-bold.mb-3(style="color: var(--text-oxford);") TikTok Networks
                                 p.mb-0(style="color: var(--text-editorial); font-weight: 400; font-size: 0.95rem; line-height: 1.7;") Retentive vertical micro-content mapping and rapid trend forecasting frameworks.
                             span.small.mt-5(style="color: var(--text-editorial); font-weight: 600; letter-spacing: 1px; font-size:0.7rem;") VERTICAL ENGAGEMENT
                     
                     // Facebook Hubs
-                    .lookbook-card
-                        span.lookbook-number 03
+                    .ecosystem-card
                         .d-flex.flex-column.justify-content-between.h-100
                             div
-                                i.bi-facebook.fs-2.mb-4.d-block(style="color: #1877F2;")
+                                .d-flex.justify-content-between.align-items-start.mb-4
+                                    i.bi-facebook.fs-2(style="color: #1877F2;")
+                                    span.ecosystem-tag Acquisition
                                 h3.h5.font-weight-bold.mb-3(style="color: var(--text-oxford);") Facebook Hubs
                                 p.mb-0(style="color: var(--text-editorial); font-weight: 400; font-size: 0.95rem; line-height: 1.7;") Highly targeted native advertising assets and dynamic broad-reach content pipelines.
                             span.small.mt-5(style="color: var(--text-editorial); font-weight: 600; letter-spacing: 1px; font-size:0.7rem;") AMPLIFIED REACH
                     
                     // LinkedIn Corporate
-                    .lookbook-card
-                        span.lookbook-number 04
+                    .ecosystem-card
                         .d-flex.flex-column.justify-content-between.h-100
                             div
-                                i.bi-linkedin.fs-2.mb-4.d-block(style="color: #0077B5;")
+                                .d-flex.justify-content-between.align-items-start.mb-4
+                                    i.bi-linkedin.fs-2(style="color: #0077B5;")
+                                    span.ecosystem-tag B2B Growth
                                 h3.h5.font-weight-bold.mb-3(style="color: var(--text-oxford);") LinkedIn Corporate
                                 p.mb-0(style="color: var(--text-editorial); font-weight: 400; font-size: 0.95rem; line-height: 1.7;") B2B executive positioning, thought leadership assets, and institutional authority frameworks.
                             span.small.mt-5(style="color: var(--gold-brass); font-weight: 700; letter-spacing: 1px; font-size:0.7rem;") CORPORATE INFLUENCE
                     
                     // Instagram Aesthetics
-                    .lookbook-card
-                        span.lookbook-number 05
+                    .ecosystem-card
                         .d-flex.flex-column.justify-content-between.h-100
                             div
-                                i.bi-instagram.fs-2.mb-4.d-block(style="color: #E1306C;")
+                                .d-flex.justify-content-between.align-items-start.mb-4
+                                    i.bi-instagram.fs-2(style="color: #E1306C;")
+                                    span.ecosystem-tag Creative Identity
                                 h3.h5.font-weight-bold.mb-3(style="color: var(--text-oxford);") Instagram Aesthetics
                                 p.mb-0(style="color: var(--text-editorial); font-weight: 400; font-size: 0.95rem; line-height: 1.7;") Premium visual design systems and organic high-converting reels structure.
                             span.small.mt-5(style="color: var(--text-editorial); font-weight: 600; letter-spacing: 1px; font-size:0.7rem;") PREMIUM IDENTITY
                     
                     // X Narratives
-                    .lookbook-card
-                        span.lookbook-number 06
+                    .ecosystem-card
                         .d-flex.flex-column.justify-content-between.h-100
                             div
-                                i.bi-twitter-x.fs-2.text-dark.mb-4.d-block
+                                .d-flex.justify-content-between.align-items-start.mb-4
+                                    i.bi-twitter-x.fs-2.text-dark
+                                    span.ecosystem-tag Syndication
                                 h3.h5.font-weight-bold.mb-3(style="color: var(--text-oxford);") X Narratives
                                 p.mb-0(style="color: var(--text-editorial); font-weight: 400; font-size: 0.95rem; line-height: 1.7;") Real-time industry authority positioning and direct network engagement assets.
                             span.small.mt-5(style="color: var(--text-editorial); font-weight: 600; letter-spacing: 1px; font-size:0.7rem;") DYNAMIC VELOCITY
