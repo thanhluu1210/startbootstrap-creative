@@ -13,7 +13,7 @@ html(lang='en')
         // Favicon
         link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
 
-        // Bootstrap Icons (Đã nâng cấp lên v1.11.3 để hiển thị đầy đủ icon mới)
+        // Bootstrap Icons
         link(href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css', rel='stylesheet')
 
         // Google fonts
@@ -156,29 +156,46 @@ html(lang='en')
                 h2.mb-4 Ready to scale your brand's presence?
                 a.btn.btn-light.btn-xl(href='#contact') Contact Us Now!
 
-        // Contact
-        section#contact.page-section
+        // Contact (Đã được redesign chuyên nghiệp bằng hệ thống Grid Card đồng bộ)
+        section#contact.page-section.bg-light
             .container.px-4.px-lg-5
                 .row.gx-4.gx-lg-5.justify-content-center
-                    .col-lg-8.col-xl-6.text-center
-                        h2.mt-0 Let's Create Something Extraordinary Together!
-                        hr.divider
-                        p.text-muted.mb-5 Ready to elevate your digital presence? Get in touch with our team today for consultations, quotes, and creative collaborations.
-                .row.gx-4.gx-lg-5.justify-content-center.mb-5
-                    .col-lg-4.text-center.mb-5.mb-lg-0
-                        i.bi-phone.fs-2.mb-3.text-muted
-                        div.font-weight-bold.text-dark 07526000056
-                    .col-lg-4.text-center.mb-5.mb-lg-0
-                        i.bi-envelope.fs-2.mb-3.text-muted
-                        div
-                            a.font-weight-bold(href='mailto:contact@haiphongmedialtd.com') contact@haiphongmedialtd.com
+                    .col-lg-8.col-xl-7.text-center.mb-5
+                        h2.mt-0.font-weight-bold Let's Create Something Extraordinary Together!
+                        hr.divider.my-4
+                        p.text-muted.fs-5 Ready to elevate your digital presence? Get in touch with our team today for consultations, quotes, and creative collaborations.
+                
                 .row.gx-4.gx-lg-5.justify-content-center
-                    .col-lg-8.text-center
-                        i.bi-geo-alt.fs-2.mb-3.text-muted
-                        div.text-muted.font-weight-bold 181 Pixton Way, Croydon, CR0 9JN, United Kingdom
+                    // Phone Card
+                    .col-lg-4.col-md-6.mb-4
+                        .card.border-0.shadow-sm.h-100.text-center.p-4.rounded-3
+                            .card-body.d-flex.flex-column.justify-content-center.align-items-center
+                                .mb-3.bg-white.shadow-sm.rounded-circle.d-flex.align-items-center.justify-content-center(style="width: 60px; height: 60px;")
+                                    i.bi-telephone.fs-3.text-primary
+                                h4.h5.font-weight-bold.mb-2 Call Us
+                                p.text-secondary.mb-0.font-weight-bold 07526000056
+                    
+                    // Email Card
+                    .col-lg-4.col-md-6.mb-4
+                        .card.border-0.shadow-sm.h-100.text-center.p-4.rounded-3
+                            .card-body.d-flex.flex-column.justify-content-center.align-items-center
+                                .mb-3.bg-white.shadow-sm.rounded-circle.d-flex.align-items-center.justify-content-center(style="width: 60px; height: 60px;")
+                                    i.bi-envelope.fs-3.text-primary
+                                h4.h5.font-weight-bold.mb-2 Email Us
+                                p.mb-0
+                                    a.text-decoration-none.text-primary.font-weight-bold(href='mailto:contact@haiphongmedialtd.com') contact@haiphongmedialtd.com
+                    
+                    // Address Card
+                    .col-lg-4.col-md-8.mb-4
+                        .card.border-0.shadow-sm.h-100.text-center.p-4.rounded-3
+                            .card-body.d-flex.flex-column.justify-content-center.align-items-center
+                                .mb-3.bg-white.shadow-sm.rounded-circle.d-flex.align-items-center.justify-content-center(style="width: 60px; height: 60px;")
+                                    i.bi-geo-alt.fs-3.text-primary
+                                h4.h5.font-weight-bold.mb-2 Our Office
+                                p.text-muted.mb-0.small 181 Pixton Way, Croydon, CR0 9JN, United Kingdom
 
         // Footer
-        footer.bg-light.py-5
+        footer.bg-light.pb-5
             .container.px-4.px-lg-5
                 .small.text-center.text-muted Copyright &copy; 2026 - HAIPHONG MEDIA LTD
 
