@@ -45,16 +45,16 @@ html(lang='en')
                         li.nav-item
                             a.nav-link(href='#contact') Contact
 
-        // Masthead
-        header.masthead
+        // Masthead (Đã được nâng cấp bằng code vẽ dải màu Bạc Titan phối Đen Obsidian siêu sang)
+        header.masthead(style="background: linear-gradient(135deg, #2d3238 0%, #1a1c1e 50%, #0b0c10 100%);")
             .container.px-4.px-lg-5.h-100
                 .row.gx-4.gx-lg-5.h-100.align-items-center.justify-content-center.text-center
                     .col-lg-8.align-self-end
                         h1.text-white.font-weight-bold INSPIRING VISUAL MASTERPIECES FOR THE DIGITAL ERA
-                        hr.divider
+                        hr.divider(style="background-color: #e2e8f0; max-width: 3.25rem; height: 0.2rem; opacity: 1;")
                     .col-lg-8.align-self-baseline
                         p.text-white-75.mb-5 High-impact video production, next-generation creative technology, and powerful cinematic storytelling designed to elevate premium brands worldwide.
-                        a.btn.btn-primary.btn-xl(href='#about') Discover Our Work
+                        a.btn.btn-light.btn-xl.shadow-sm(href='#about', style="color: #0b0c10; font-weight: 700; border: none;") Discover Our Work
 
         // About
         section#about.page-section.bg-primary
@@ -97,7 +97,7 @@ html(lang='en')
                             h3.h5.font-weight-bold.mb-2 Dynamic Strategy
                             p.text-muted.mb-0 Performance-driven cross-platform architecture to accelerate reach, retention, and digital dominance.
 
-        // Portfolio (Được tối ưu thành hệ thống Minimalist Cards cực kỳ sang trọng, loại bỏ chữ Platform quê mùa)
+        // Portfolio
         section#portfolio.page-section.bg-light
             .container.px-4.px-lg-5
                 .text-center.mb-5
@@ -195,7 +195,7 @@ html(lang='en')
                             .card-body.d-flex.flex-column.justify-content-center.align-items-center
                                 .mb-3.bg-white.shadow-sm.rounded-circle.d-flex.align-items-center.justify-content-center(style="width: 60px; height: 60px;")
                                     i.bi-geo-alt.fs-3.text-primary
-                                h4.h5.font-weight-bold.mb-2 Headquarters
+                                h4.h5.font-weight-bold Headquarters
                                 p.text-muted.mb-0.small 181 Pixton Way, Croydon, CR0 9JN, United Kingdom
 
         // Footer
