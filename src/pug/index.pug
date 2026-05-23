@@ -16,215 +16,249 @@ html(lang='en')
         // Bootstrap Icons
         link(href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css', rel='stylesheet')
 
-        // Google fonts - Jakarta Sans
-        link(href='https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:300,400,500,600,700,800', rel='stylesheet')
+        // Google fonts - Cormorant Garamond (Classic Luxury) & Plus Jakarta Sans (Modern)
+        link(href='https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap', rel='stylesheet')
 
         // Core theme CSS
         link(href='css/styles.css', rel='stylesheet')
 
-        // STYLE INJECTION: PROFESSIONAL LIGHT MODE
+        // STYLE INJECTION: LUXURY EDITORIAL (HERITAGE MODERN MODE)
         style.
             :root {
-                --bg-main: #ffffff;
-                --bg-sub: #f8fafc;
-                --bg-card: #ffffff;
-                --text-main: #1e293b;
-                --text-sub: #64748b;
-                --accent: #d69e2e;
-                --border-light: rgba(0, 0, 0, 0.04);
+                --bg-heritage: #fbf9f4; /* Royal Ivory Warm Canvas */
+                --bg-cream: #f4efe3;    /* Fine Linen/Champagne Accent */
+                --text-oxford: #111622; /* Deep Midnight Oxford Ink */
+                --text-editorial: #4a5264; /* Muted Slate Slate */
+                --gold-brass: #b5893d;   /* Antique Classic Brass Gold */
+                --border-fine: #dfd7c2;  /* Thin Gallery Line border */
             }
             body {
                 font-family: 'Plus Jakarta Sans', sans-serif !important;
-                background-color: var(--bg-main);
-                color: var(--text-main);
+                background-color: var(--bg-heritage);
+                color: var(--text-oxford);
                 letter-spacing: -0.01em;
             }
+            .font-classic {
+                font-family: 'Cormorant Garamond', serif !important;
+            }
+            /* Custom Scrollbar - Editorial Style */
             ::-webkit-scrollbar {
-                width: 6px;
+                width: 5px;
             }
             ::-webkit-scrollbar-track {
-                background: var(--bg-main);
+                background: var(--bg-heritage);
             }
             ::-webkit-scrollbar-thumb {
-                background: #e2e8f0;
-                border-radius: 3px;
+                background: var(--border-fine);
+                border-radius: 0px;
             }
             ::-webkit-scrollbar-thumb:hover {
-                background: var(--accent);
+                background: var(--gold-brass);
             }
+            /* Navigation - Transparent Glass Editorial */
             #mainNav {
-                background-color: rgba(255, 255, 255, 0.95) !important;
-                backdrop-filter: blur(10px);
-                -webkit-backdrop-filter: blur(10px);
-                border-bottom: 1px solid var(--border-light);
-                box-shadow: 0 4px 12px rgba(0,0,0,0.02);
-                transition: all 0.3s ease;
+                background-color: rgba(251, 249, 244, 0.9) !important;
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                border-bottom: 1px solid var(--border-fine);
+                box-shadow: 0 2px 20px rgba(181,137,61,0.03);
+                transition: all 0.4s ease;
             }
             #mainNav.navbar-shrink {
-                padding-top: 1rem !important;
-                padding-bottom: 1rem !important;
-                background-color: #ffffff !important;
-                box-shadow: 0 6px 15px rgba(0,0,0,0.04);
+                padding-top: 0.8rem !important;
+                padding-bottom: 0.8rem !important;
+                background-color: var(--bg-heritage) !important;
             }
             #mainNav .navbar-brand {
-                color: var(--text-main) !important;
-                font-weight: 800 !important;
-                letter-spacing: 2.5px;
-                font-size: 1.05rem;
+                color: var(--text-oxford) !important;
+                font-family: 'Cormorant Garamond', serif !important;
+                font-weight: 700 !important;
+                letter-spacing: 3px;
+                font-size: 1.3rem;
             }
             #mainNav .nav-link {
-                color: var(--text-main) !important;
+                color: var(--text-oxford) !important;
                 font-weight: 600;
-                font-size: 0.8rem;
+                font-size: 0.75rem;
                 text-transform: uppercase;
-                letter-spacing: 1.2px;
-                padding: 0.5rem 1rem !important;
-                transition: color 0.2s ease;
-                opacity: 0.85;
+                letter-spacing: 2px;
+                padding: 0.5rem 1.2rem !important;
+                transition: all 0.3s ease;
+                opacity: 0.8;
             }
             #mainNav .nav-link:hover {
-                color: var(--accent) !important;
+                color: var(--gold-brass) !important;
                 opacity: 1;
             }
+            /* Hero Masthead - Prestige Gallery Studio Look */
             .masthead {
-                background: linear-gradient(135deg, rgba(248,250,252,0.6) 0%, rgba(255,255,255,1) 60%), radial-gradient(circle at 80% 20%, rgba(214,158,46,0.03) 0%, rgba(255,255,255,0) 50%) !important;
-                padding: 18rem 0 16rem 0 !important;
+                background: var(--bg-heritage) !important;
+                padding: 20rem 0 16rem 0 !important;
                 position: relative;
-                overflow: hidden;
             }
-            .masthead .container {
-                position: relative;
-                z-index: 1;
+            .masthead::before {
+                content: '';
+                position: absolute;
+                bottom: 0; left: 10%; width: 80%; height: 1px;
+                background-color: var(--border-fine);
             }
             h1 {
-                font-size: calc(2.4rem + 2.5vw) !important;
-                font-weight: 800 !important;
-                line-height: 1.1;
-                letter-spacing: -0.03em;
-                color: var(--text-main);
-                margin-bottom: 1.5rem;
+                font-family: 'Cormorant Garamond', serif !important;
+                font-size: calc(2.8rem + 3vw) !important;
+                font-weight: 600 !important;
+                line-height: 1.05;
+                letter-spacing: -0.02em;
+                color: var(--text-oxford);
+                margin-bottom: 2rem;
+                font-style: italic;
+            }
+            h1 span {
+                font-style: normal !important;
+                display: block;
+                font-weight: 700;
+                letter-spacing: -0.01em;
             }
             hr.divider, hr.divider-dark {
                 display: none !important;
             }
+            /* Editorial Premium Buttons */
             .btn-xl {
-                padding: 1.25rem 2.5rem !important;
-                font-size: 0.8rem !important;
+                padding: 1.3rem 2.8rem !important;
+                font-size: 0.75rem !important;
                 font-weight: 700 !important;
                 text-transform: uppercase !important;
-                letter-spacing: 1.5px !important;
-                border-radius: 5px !important;
-                transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+                letter-spacing: 2.5px !important;
+                border-radius: 0px !important; /* Sharp corners for classic museum luxury look */
+                transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1) !important;
             }
             .btn-neon {
-                background-color: var(--accent) !important;
-                color: #ffffff !important;
-                border: 1px solid var(--accent) !important;
-                box-shadow: 0 4px 15px rgba(214, 158, 46, 0.15);
+                background-color: var(--text-oxford) !important;
+                color: var(--bg-heritage) !important;
+                border: 1px solid var(--text-oxford) !important;
             }
             .btn-neon:hover {
-                transform: translateY(-3px);
-                box-shadow: 0 10px 25px rgba(214, 158, 46, 0.25);
-                background-color: #c48f29 !important;
+                transform: translateY(-4px);
+                background-color: var(--gold-brass) !important;
+                border-color: var(--gold-brass) !important;
+                color: #ffffff !important;
+                box-shadow: 0 10px 25px rgba(181,137,61,0.15);
             }
             .btn-outline-neon {
                 background-color: transparent !important;
-                color: var(--accent) !important;
-                border: 1px solid var(--accent) !important;
+                color: var(--text-oxford) !important;
+                border: 1px solid var(--border-fine) !important;
             }
             .btn-outline-neon:hover {
-                background-color: rgba(214, 158, 46, 0.05) !important;
-                transform: translateY(-3px);
-                border-color: var(--accent) !important;
+                background-color: rgba(18,24,37,0.02) !important;
+                border-color: var(--text-oxford) !important;
+                transform: translateY(-4px);
             }
+            /* Section Titles */
             .section-title {
-                font-size: calc(1.8rem + 1vw) !important;
-                font-weight: 800 !important;
-                letter-spacing: -0.02em;
-                line-height: 1.2;
-                background: linear-gradient(135deg, #1e293b 0%, #475569 100%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
+                font-family: 'Cormorant Garamond', serif !important;
+                font-size: calc(2.2rem + 1.2vw) !important;
+                font-weight: 600 !important;
+                line-height: 1.15;
+                color: var(--text-oxford);
             }
             .subtitle-vanguard {
+                font-family: 'Plus Jakarta Sans', sans-serif !important;
                 text-transform: uppercase;
-                letter-spacing: 2px;
+                letter-spacing: 3px;
                 font-size: 0.75rem;
-                color: var(--accent);
+                color: var(--gold-brass);
                 font-weight: 700;
                 display: inline-block;
-                margin-bottom: 0.75rem;
+                margin-bottom: 1rem;
             }
+            /* Studio Capability Cards */
             .service-box-card {
-                background: var(--bg-card);
-                border: 1px solid var(--border-light);
-                padding: 4rem 2rem;
-                border-radius: 12px;
-                transition: all 0.3s ease;
-                box-shadow: 0 10px 25px rgba(0,0,0,0.02);
+                background: var(--bg-heritage);
+                border: 1px solid var(--border-fine);
+                padding: 4.5rem 2rem;
+                border-radius: 0px;
+                transition: all 0.4s ease;
+                position: relative;
             }
             .service-box-card:hover {
+                background-color: var(--bg-cream);
                 transform: translateY(-5px);
-                border-color: rgba(214, 158, 46, 0.1);
-                box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+                border-color: var(--gold-brass);
             }
             .service-icon {
-                font-size: 2.8rem;
-                color: var(--accent);
-                margin-bottom: 1.8rem;
+                font-size: 2.5rem;
+                color: var(--text-oxford);
+                margin-bottom: 2rem;
                 display: inline-block;
+                transition: color 0.3s ease;
             }
-            .ecosystem-grid {
+            .service-box-card:hover .service-icon {
+                color: var(--gold-brass);
+            }
+            /* Bespoke Dynamic Lookbook Grid (Ecosystems Section) */
+            .lookbook-grid {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
-                gap: 2rem;
+                gap: 2.5rem;
             }
             @media (max-width: 992px) {
-                .ecosystem-grid { grid-template-columns: repeat(2, 1fr); }
+                .lookbook-grid { grid-template-columns: repeat(2, 1fr); }
             }
-            @media (max-width: 576px) {
-                .ecosystem-grid { grid-template-columns: 1fr; }
+            @media (max-width: 650px) {
+                .lookbook-grid { grid-template-columns: 1fr; }
             }
-            .ecosystem-card {
-                background: var(--bg-card);
-                border: 1px solid var(--border-light);
-                border-radius: 16px;
-                padding: 3rem;
-                min-height: 300px;
-                transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            .lookbook-card {
+                background: #ffffff;
+                border: 1px solid var(--border-fine);
+                border-radius: 0px;
+                padding: 3.5rem 2.5rem;
+                min-height: 380px;
+                transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
                 position: relative;
-                overflow: hidden;
-                box-shadow: 0 15px 30px rgba(0,0,0,0.02);
+                display: flex;
+                flex-column: column;
+                justify-content: space-between;
             }
-            .ecosystem-card:hover {
-                transform: translateY(-6px);
-                border-color: rgba(214, 158, 46, 0.2);
-                box-shadow: 0 25px 50px rgba(0,0,0,0.06);
+            .lookbook-card:hover {
+                transform: scale(1.02);
+                border-color: var(--text-oxford);
+                box-shadow: 0 30px 60px rgba(18,24,37,0.05);
             }
-            .ecosystem-card-content {
-                position: relative;
-                z-index: 1;
-                height: 100%;
+            /* Heritage Big Numbers */
+            .lookbook-number {
+                font-family: 'Cormorant Garamond', serif !important;
+                font-size: 3.5rem;
+                font-weight: 300;
+                color: var(--border-fine);
+                line-height: 1;
+                position: absolute;
+                top: 2.5rem; right: 2.5rem;
+                transition: color 0.4s ease;
             }
+            .lookbook-card:hover .lookbook-number {
+                color: var(--gold-brass);
+                font-weight: 500;
+            }
+            /* Contact UI Elements */
             .contact-block {
-                background: var(--bg-sub);
-                border-radius: 10px;
-                padding: 2.5rem;
-                border: 1px solid var(--border-light);
-                transition: all 0.3s ease;
+                background: #ffffff;
+                border-radius: 0px;
+                padding: 3rem 2rem;
+                border: 1px solid var(--border-fine);
+                transition: all 0.4s ease;
             }
             .contact-block:hover {
-                border-color: rgba(0, 0, 0, 0.08);
-                background: #f1f5f9;
+                border-color: var(--text-oxford);
+                box-shadow: 0 15px 40px rgba(0,0,0,0.03);
             }
             .contact-icon {
-                color: var(--accent);
-                font-size: 1.6rem;
+                color: var(--gold-brass);
+                font-size: 1.5rem;
             }
 
     body#page-top
 
-        // Navigation
+        // Navigation Menu
         nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top.py-3
             .container.px-4.px-lg-5
                 a.navbar-brand(href='#page-top') HAIPHONG MEDIA LTD
@@ -241,167 +275,169 @@ html(lang='en')
                         li.nav-item
                             a.nav-link(href='#contact') Contact
 
-        // Masthead Hero Section
+        // Editorial Masthead Hero Section
         header.masthead
             .container.px-4.px-lg-5.h-100
                 .row.gx-4.gx-lg-5.h-100.align-items-center.justify-content-center.text-center
                     .col-lg-11.align-self-end
                         span.subtitle-vanguard London Creative Laboratory
-                        h1 VISUAL ARCHITECTURE FOR THE DIGITAL FRONTIER
-                        div(style="height: 1rem;")
-                    .col-lg-8.align-self-baseline
-                        p.mb-5(style="color: var(--text-sub); font-size: 1.15rem; font-weight: 300; line-height: 1.7; max-width: 600px; margin: 0 auto;") Executive-level video production, cutting-edge creative technologies, and disruptive platform narratives engineered for the world's most ambitious brands.
+                        h1
+                            | Visual Architecture
+                            span For The Digital Frontier.
+                        div(style="height: 1.5rem;")
+                    .col-lg-7.align-self-baseline
+                        p.mb-5(style="color: var(--text-editorial); font-size: 1.15rem; font-weight: 400; line-height: 1.8; max-width: 620px; margin: 0 auto;") Executive-level video production, cutting-edge creative technologies, and disruptive platform narratives engineered for the world's most ambitious brands.
                         a.btn.btn-neon.btn-xl.me-3(href='#about') Enter Agency
                         a.btn.btn-outline-neon.btn-xl(href='#contact') Schedule Call
 
-        // About Section
-        section#about.page-section(style="background-color: var(--bg-main); padding: 12rem 0; border-top: 1px solid var(--border-light);")
+        // Fine Arts About Section
+        section#about.page-section(style="background-color: var(--bg-heritage); padding: 13rem 0;")
             .container.px-4.px-lg-5
-                .row.gx-4.gx-lg-5.align-items-center
+                .row.gx-5.align-items-center
                     .col-lg-5.mb-5.mb-lg-0
                         span.subtitle-vanguard Strategic Paradigm
-                        h2.section-title(style="line-height: 1.2;")
-                            | Cinematic Precision,
-                            br
-                            | Digital Intelligence.
-                    .col-lg-7
-                        p.mb-4(style="color: var(--text-sub); font-size: 1.1rem; line-height: 1.8; font-weight: 300;") Headquartered in London, HAIPHONG MEDIA LTD operates at the convergence of world-class cinematic craftsmanship and vanguard media engineering. We build high-fidelity visual assets, automated content architectures, and retentive media frameworks. 
-                        p.mb-0(style="color: var(--text-sub); font-size: 1.1rem; line-height: 1.8; font-weight: 300;") We don't just output video—we establish digital authority, accelerate market reach, and position premium entities to scale seamlessly across global networks.
+                        h2.section-title(style="font-style: italic;") Cinematic Precision,#[br]#[span(style="font-style: normal; font-weight:700;") Digital Intelligence.]
+                    .col-lg-7(style="border-left: 1px solid var(--border-fine); padding-left: 3rem;")
+                        p.mb-4(style="color: var(--text-editorial); font-size: 1.1rem; line-height: 1.8; font-weight: 400;") Headquartered in London, HAIPHONG MEDIA LTD operates at the convergence of world-class cinematic craftsmanship and vanguard media engineering. We build high-fidelity visual assets, automated content architectures, and retentive media frameworks. 
+                        p.mb-0(style="color: var(--text-editorial); font-size: 1.1rem; line-height: 1.8; font-weight: 400;") We don't just output video—we establish digital authority, accelerate market reach, and position premium entities to scale seamlessly across global networks.
 
-        // Services Section
-        section#services.page-section(style="background-color: var(--bg-sub); padding: 12rem 0; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);")
+        // Premium Studio Services Section
+        section#services.page-section(style="background-color: var(--bg-cream); padding: 13rem 0;")
             .container.px-4.px-lg-5
-                .text-center.mb-5(style="max-width: 600px; margin: 0 auto;")
+                .text-center.mb-5.pb-3(style="max-width: 600px; margin: 0 auto;")
                     span.subtitle-vanguard Expertise
                     h2.section-title Core Capabilities
-                    p.mt-2(style="color: var(--text-sub); font-weight: 300;") Architectural visual systems tailored for executive deployment.
+                    p.mt-2(style="color: var(--text-editorial); font-weight: 400; font-size: 1rem;") Architectural visual systems tailored for executive deployment.
                 .row.gx-4.gx-lg-5.pt-4
                     .col-lg-3.col-md-6.mb-4
                         .service-box-card.text-center.h-100
                             i.bi-camera-video.service-icon
-                            h3.h6.font-weight-bold.mb-3(style="letter-spacing: -0.2px; text-transform: uppercase;") Video Production
-                            p.small.mb-0(style="color: var(--text-sub); line-height: 1.6;") Premium commercial execution, elite brand documentaries, and masterwork assets.
+                            h3.h6.font-weight-bold.mb-3(style="letter-spacing: 1.5px; text-transform: uppercase; font-size: 0.8rem;") Video Production
+                            p.small.mb-0(style="color: var(--text-editorial); line-height: 1.6; font-weight:400;") Premium commercial execution, elite brand documentaries, and masterwork assets.
                     .col-lg-3.col-md-6.mb-4
                         .service-box-card.text-center.h-100
                             i.bi-cpu.service-icon
-                            h3.h6.font-weight-bold.mb-3(style="letter-spacing: -0.2px; text-transform: uppercase;") Creative Tech
-                            p.small.mb-0(style="color: var(--text-sub); line-height: 1.6;") Synthesizing high-fidelity rendering, advanced virtual animations, and AI workflows.
+                            h3.h6.font-weight-bold.mb-3(style="letter-spacing: 1.5px; text-transform: uppercase; font-size: 0.8rem;") Creative Tech
+                            p.small.mb-0(style="color: var(--text-editorial); line-height: 1.6; font-weight:400;") Synthesizing high-fidelity rendering, advanced virtual animations, and AI workflows.
                     .col-lg-3.col-md-6.mb-4
                         .service-box-card.text-center.h-100
                             i.bi-magic.service-icon
-                            h3.h6.font-weight-bold.mb-3(style="letter-spacing: -0.2px; text-transform: uppercase;") Post-Mastering
-                            p.small.mb-0(style="color: var(--text-sub); line-height: 1.6;") High-end precision color spaces, seamless VFX integration, and spatial acoustic design.
+                            h3.h6.font-weight-bold.mb-3(style="letter-spacing: 1.5px; text-transform: uppercase; font-size: 0.8rem;") Post-Mastering
+                            p.small.mb-0(style="color: var(--text-editorial); line-height: 1.6; font-weight:400;") High-end precision color spaces, seamless VFX integration, and spatial acoustic design.
                     .col-lg-3.col-md-6.mb-4
                         .service-box-card.text-center.h-100
                             i.bi-graph-up-arrow.service-icon
-                            h3.h6.font-weight-bold.mb-3(style="letter-spacing: -0.2px; text-transform: uppercase;") Strategy Models
-                            p.small.mb-0(style="color: var(--text-sub); line-height: 1.6;") Data-informed cross-platform architecture to maximize target audience retention.
+                            h3.h6.font-weight-bold.mb-3(style="letter-spacing: 1.5px; text-transform: uppercase; font-size: 0.8rem;") Strategy Models
+                            p.small.mb-0(style="color: var(--text-editorial); line-height: 1.6; font-weight:400;") Data-informed cross-platform architecture to maximize target audience retention.
 
-        // Ecosystem Section
-        section#portfolio.page-section(style="background-color: var(--bg-main); padding: 12rem 0;")
+        // Ecosystem Section - Lookbook Chapter Design (Modern meets Vintage)
+        section#portfolio.page-section(style="background-color: var(--bg-heritage); padding: 13rem 0;")
             .container.px-4.px-lg-5
-                .mb-5.pb-3
+                .mb-5.pb-4(style="border-bottom: 1px solid var(--border-fine);")
                     span.subtitle-vanguard Global Infrastructure
-                    h2.section-title Native Optimization
-                    p.mt-1(style="color: var(--text-sub); font-weight: 300;") Flawless content deployment mechanics engineered across global networks.
+                    h2.section-title Native Optimization Systems
+                    p.mt-1.mb-3(style="color: var(--text-editorial); font-weight: 400;") Flawless content deployment mechanics engineered across global networks.
                 
-                .ecosystem-grid
-                    // YouTube
-                    .ecosystem-card
-                        .ecosystem-card-content.d-flex.flex-column.h-100.justify-content-between
+                .lookbook-grid
+                    // YouTube Engine
+                    .lookbook-card
+                        span.lookbook-number 01
+                        .d-flex.flex-column.justify-content-between.h-100
                             div
-                                i.bi-youtube.fs-1.text-danger.mb-4.d-block
-                                h3.h5.font-weight-bold.mb-3 YouTube Publishing Engine
-                                p(style="color: var(--text-sub); font-weight: 300; font-size: 0.95rem; line-height: 1.6;") Long-form cinematic documentaries, serialized structural formatting, and authority pipelines.
-                            span.small.mt-4(style="color: var(--accent); font-weight: 700; letter-spacing: 0.5px;") HIGH-RETENTION SYSTEMS
+                                i.bi-youtube.fs-2.text-danger.mb-4.d-block
+                                h3.h5.font-weight-bold.mb-3(style="color: var(--text-oxford);") YouTube Publishing Engine
+                                p.mb-0(style="color: var(--text-editorial); font-weight: 400; font-size: 0.95rem; line-height: 1.7;") Long-form cinematic documentaries, serialized structural formatting, and authority pipelines.
+                            span.small.mt-5(style="color: var(--gold-brass); font-weight: 700; letter-spacing: 1px; font-size:0.7rem;") HIGH-RETENTION SYSTEMS
                     
-                    // TikTok
-                    .ecosystem-card
-                        .ecosystem-card-content.d-flex.flex-column.h-100.justify-content-between
+                    // TikTok Networks
+                    .lookbook-card
+                        span.lookbook-number 02
+                        .d-flex.flex-column.justify-content-between.h-100
                             div
-                                i.bi-tiktok.fs-1.text-dark.mb-4.d-block
-                                h3.h5.font-weight-bold.mb-3 TikTok Networks
-                                p(style="color: var(--text-sub); font-weight: 300; font-size: 0.95rem; line-height: 1.6;") Retentive vertical micro-content mapping and rapid trend forecasting frameworks.
-                            span.small.mt-4(style="color: rgba(0,0,0,0.3); font-weight: 600; letter-spacing: 0.5px;") Vertical Engagement
+                                i.bi-tiktok.fs-2.text-dark.mb-4.d-block
+                                h3.h5.font-weight-bold.mb-3(style="color: var(--text-oxford);") TikTok Networks
+                                p.mb-0(style="color: var(--text-editorial); font-weight: 400; font-size: 0.95rem; line-height: 1.7;") Retentive vertical micro-content mapping and rapid trend forecasting frameworks.
+                            span.small.mt-5(style="color: var(--text-editorial); font-weight: 600; letter-spacing: 1px; font-size:0.7rem;") VERTICAL ENGAGEMENT
                     
-                    // Facebook
-                    .ecosystem-card
-                        .ecosystem-card-content.d-flex.flex-column.h-100.justify-content-between
+                    // Facebook Hubs
+                    .lookbook-card
+                        span.lookbook-number 03
+                        .d-flex.flex-column.justify-content-between.h-100
                             div
-                                i.bi-facebook.fs-1.mb-4.d-block(style="color: #1877F2;")
-                                h3.h5.font-weight-bold.mb-3 Facebook Hubs
-                                p(style="color: var(--text-sub); font-weight: 300; font-size: 0.95rem; line-height: 1.6;") Highly targeted native advertising assets and dynamic broad-reach content pipelines.
-                            span.small.mt-4(style="color: rgba(0,0,0,0.3); font-weight: 600; letter-spacing: 0.5px;") Amplified Reach
+                                i.bi-facebook.fs-2.mb-4.d-block(style="color: #1877F2;")
+                                h3.h5.font-weight-bold.mb-3(style="color: var(--text-oxford);") Facebook Hubs
+                                p.mb-0(style="color: var(--text-editorial); font-weight: 400; font-size: 0.95rem; line-height: 1.7;") Highly targeted native advertising assets and dynamic broad-reach content pipelines.
+                            span.small.mt-5(style="color: var(--text-editorial); font-weight: 600; letter-spacing: 1px; font-size:0.7rem;") AMPLIFIED REACH
                     
-                    // LinkedIn
-                    .ecosystem-card
-                        .ecosystem-card-content.d-flex.flex-column.h-100.justify-content-between
+                    // LinkedIn Corporate
+                    .lookbook-card
+                        span.lookbook-number 04
+                        .d-flex.flex-column.justify-content-between.h-100
                             div
-                                i.bi-linkedin.fs-1.mb-4.d-block(style="color: #0077B5;")
-                                h3.h5.font-weight-bold.mb-3 LinkedIn Corporate
-                                p(style="color: var(--text-sub); font-weight: 300; font-size: 0.95rem; line-height: 1.6;") B2B executive positioning, thought leadership assets, and institutional authority frameworks.
-                            span.small.mt-4(style="color: var(--accent); font-weight: 700; letter-spacing: 0.5px;") CORPORATE INFLUENCE
+                                i.bi-linkedin.fs-2.mb-4.d-block(style="color: #0077B5;")
+                                h3.h5.font-weight-bold.mb-3(style="color: var(--text-oxford);") LinkedIn Corporate
+                                p.mb-0(style="color: var(--text-editorial); font-weight: 400; font-size: 0.95rem; line-height: 1.7;") B2B executive positioning, thought leadership assets, and institutional authority frameworks.
+                            span.small.mt-5(style="color: var(--gold-brass); font-weight: 700; letter-spacing: 1px; font-size:0.7rem;") CORPORATE INFLUENCE
                     
-                    // Instagram
-                    .ecosystem-card
-                        .ecosystem-card-content.d-flex.flex-column.h-100.justify-content-between
+                    // Instagram Aesthetics
+                    .lookbook-card
+                        span.lookbook-number 05
+                        .d-flex.flex-column.justify-content-between.h-100
                             div
-                                i.bi-instagram.fs-1.mb-4.d-block(style="color: #E1306C;")
-                                h3.h5.font-weight-bold.mb-3 Instagram Aesthetics
-                                p(style="color: var(--text-sub); font-weight: 300; font-size: 0.95rem; line-height: 1.6;") Premium visual design systems and organic high-converting reels structure.
-                            span.small.mt-4(style="color: rgba(0,0,0,0.3); font-weight: 600; letter-spacing: 0.5px;") Premium Identity
+                                i.bi-instagram.fs-2.mb-4.d-block(style="color: #E1306C;")
+                                h3.h5.font-weight-bold.mb-3(style="color: var(--text-oxford);") Instagram Aesthetics
+                                p.mb-0(style="color: var(--text-editorial); font-weight: 400; font-size: 0.95rem; line-height: 1.7;") Premium visual design systems and organic high-converting reels structure.
+                            span.small.mt-5(style="color: var(--text-editorial); font-weight: 600; letter-spacing: 1px; font-size:0.7rem;") PREMIUM IDENTITY
                     
-                    // Twitter-X
-                    .ecosystem-card
-                        .ecosystem-card-content.d-flex.flex-column.h-100.justify-content-between
+                    // X Narratives
+                    .lookbook-card
+                        span.lookbook-number 06
+                        .d-flex.flex-column.justify-content-between.h-100
                             div
-                                i.bi-twitter-x.fs-1.text-dark.mb-4.d-block
-                                h3.h5.font-weight-bold.mb-3 X Narratives
-                                p(style="color: var(--text-sub); font-weight: 300; font-size: 0.95rem; line-height: 1.6;") Real-time industry authority positioning and direct network engagement assets.
-                            span.small.mt-4(style="color: rgba(0,0,0,0.3); font-weight: 600; letter-spacing: 0.5px;") Dynamic Velocity
+                                i.bi-twitter-x.fs-2.text-dark.mb-4.d-block
+                                h3.h5.font-weight-bold.mb-3(style="color: var(--text-oxford);") X Narratives
+                                p.mb-0(style="color: var(--text-editorial); font-weight: 400; font-size: 0.95rem; line-height: 1.7;") Real-time industry authority positioning and direct network engagement assets.
+                            span.small.mt-5(style="color: var(--text-editorial); font-weight: 600; letter-spacing: 1px; font-size:0.7rem;") DYNAMIC VELOCITY
 
-        // Call to Action
-        section.page-section(style="background-color: var(--bg-sub); padding: 10rem 0; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);")
-            .container.px-4.px-lg-5.text-center(style="max-width: 700px;")
+        // Premium Minimal Call to Action Section
+        section.page-section(style="background-color: var(--bg-cream); padding: 11rem 0; position: relative;")
+            .container.px-4.px-lg-5.text-center(style="max-width: 750px; margin: 0 auto;")
                 span.subtitle-vanguard Global Expansion
-                h2.section-title Accelerate Your Global Footprint.
-                p.mt-3.mb-5(style="color: var(--text-sub); font-size: 1.15rem; font-weight: 300; line-height: 1.7;") Partner with our London creative team to architect high-end media pipelines. Initiate your production brief today.
+                h2.section-title(style="font-style: italic; margin-bottom: 1.5rem;") Accelerate Your#[br]#[span(style="font-style:normal; font-weight:700;") Global Footprint.]
+                p.mb-5(style="color: var(--text-editorial); font-size: 1.15rem; font-weight: 400; line-height: 1.7;") Partner with our London creative team to architect high-end media pipelines. Initiate your production brief today.
                 a.btn.btn-neon.btn-xl(href='#contact') Initiate Brief
 
-        // Contact Section
-        section#contact.page-section(style="background-color: var(--bg-main); padding: 12rem 0;")
+        // Fine Letterhead Contact Section
+        section#contact.page-section(style="background-color: var(--bg-heritage); padding: 13rem 0;")
             .container.px-4.px-lg-5
                 .row.gx-5.justify-content-between.align-items-center
                     .col-lg-5.mb-5.mb-lg-0
                         span.subtitle-vanguard Inquiries
                         h2.section-title Strategic Engagement
-                        p.mt-3.mb-0(style="color: var(--text-sub); line-height: 1.8; font-weight: 300;") Partner with us to revolutionize your digital storytelling. Reach out for corporate dynamic consulting or project bookings. Headquartered in London.
+                        p.mt-3.mb-0(style="color: var(--text-editorial); line-height: 1.8; font-weight: 400; font-size: 1.05rem;") Partner with us to revolutionize your digital storytelling. Reach out for corporate dynamic consulting or project bookings. Headquartered in London.
                     .col-lg-6
                         .row
                             .col-md-6.mb-4
                                 .contact-block.h-100.d-flex.flex-column.justify-content-between
                                     div
                                         i.bi-phone.contact-icon.mb-3.d-block
-                                        span.small.d-block(style="color: var(--text-sub); text-transform: uppercase; letter-spacing: 1px;") Direct Line
-                                        strong.d-block.mt-2(style="font-size: 1rem; color: var(--text-main); letter-spacing: -0.3px;") 07526000056
+                                        span.small.d-block(style="color: var(--text-editorial); text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.7rem; font-weight:600;") Direct Line
+                                        strong.d-block.mt-2(style="font-size: 1.1rem; color: var(--text-oxford); letter-spacing: -0.3px;") 07526000056
                             .col-md-6.mb-4
                                 .contact-block.h-100.d-flex.flex-column.justify-content-between
                                     div
                                         i.bi-envelope.contact-icon.mb-3.d-block
-                                        span.small.d-block(style="color: var(--text-sub); text-transform: uppercase; letter-spacing: 1px;") Global Press
-                                        a.text-decoration-none.d-block.mt-2(href='mailto:contact@haiphongmedialtd.com', style="font-weight: 700; word-break: break-all; font-size: 0.9rem; color: var(--accent);") contact@haiphongmedialtd.com
+                                        span.small.d-block(style="color: var(--text-editorial); text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.7rem; font-weight:600;") Global Press
+                                        a.text-decoration-none.d-block.mt-2(href='mailto:contact@haiphongmedialtd.com', style="font-weight: 700; word-break: break-all; font-size: 0.9rem; color: var(--gold-brass);") contact@haiphongmedialtd.com
                             .col-12
                                 .contact-block
                                     i.bi-geo-alt.contact-icon.mb-3.d-block
-                                    span.small.d-block(style="color: var(--text-sub); text-transform: uppercase; letter-spacing: 1px;") Headquarters
-                                    strong.d-block.mt-2(style="font-weight: 500; font-size: 0.95rem; line-height: 1.6; color: var(--text-main);")
-                                        | 181 Pixton Way, Croydon,
-                                        br
-                                        | CR0 9JN, United Kingdom
+                                    span.small.d-block(style="color: var(--text-editorial); text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.7rem; font-weight:600;") Headquarters
+                                    strong.d-block.mt-2(style="font-weight: 500; font-size: 0.95rem; line-height: 1.6; color: var(--text-oxford);") 181 Pixton Way, Croydon,#[br]CR0 9JN, United Kingdom
 
         // Footer
-        footer.py-5(style="background-color: var(--bg-sub); border-top: 1px solid var(--border-light);")
+        footer.py-5(style="background-color: var(--bg-cream); border-top: 1px solid var(--border-fine);")
             .container.px-4.px-lg-5
-                .small.text-center(style="color: var(--text-sub); letter-spacing: 0.3px;") Copyright &copy; 2026 - HAIPHONG MEDIA LTD. All rights reserved. Professional High-End Visual Production House - London.
+                .small.text-center(style="color: var(--text-editorial); letter-spacing: 0.5px; font-size: 0.8rem;") Copyright &copy; 2026 - HAIPHONG MEDIA LTD. All rights reserved. Premium Visual Production House &mdash; London.
 
-        script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js')
+        script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bundle.min.js')
