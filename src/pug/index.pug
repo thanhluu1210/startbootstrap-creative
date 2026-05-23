@@ -22,12 +22,12 @@ html(lang='en')
         // Core theme CSS
         link(href='css/styles.css', rel='stylesheet')
 
-        // STYLE INJECTION: CINEMATIC NEO-NOIR ULTRA PREMIUM
+        // STYLE INJECTION: CINEMATIC NEO-NOIR ULTRA PREMIUM (UPDATED UNIFORM GRID)
         style.
             :root {
                 --bg-main: #050508;
                 --bg-sub: #0b0b0f;
-                --bg-card: #121218;
+                --bg-card: #0d0d14;
                 --accent: #e5a93b;
                 --text-muted: #94a3b8;
             }
@@ -37,7 +37,7 @@ html(lang='en')
                 color: #ffffff;
                 letter-spacing: -0.01em;
             }
-            /* Custom Selection */
+            /* Scrollbar Customization */
             ::-webkit-scrollbar {
                 width: 8px;
             }
@@ -199,56 +199,50 @@ html(lang='en')
                 margin-bottom: 1.8rem;
                 display: inline-block;
             }
-            /* Master Bento Grid Layout */
-            .bento-grid {
+            /* Symmetric Ecosystem Grid Layout (NEW) */
+            .ecosystem-grid {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
-                gap: 1.75rem;
+                gap: 2rem;
             }
             @media (max-width: 992px) {
-                .bento-grid { grid-template-columns: repeat(2, 1fr); }
+                .ecosystem-grid { grid-template-columns: repeat(2, 1fr); }
             }
-            @media (max-width: 576px) {
-                .bento-grid { grid-template-columns: 1fr; }
+            @media (max-width: 768px) {
+                .ecosystem-grid { grid-template-columns: 1fr; }
             }
-            .bento-card {
-                background: #0f0f14;
+            .ecosystem-card {
+                background: var(--bg-card);
                 border: 1px solid rgba(255, 255, 255, 0.04);
                 border-radius: 20px;
-                padding: 2.5rem;
-                min-height: 280px;
+                padding: 3rem 2.2rem;
+                min-height: 350px;
                 transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
                 position: relative;
                 overflow: hidden;
             }
-            .bento-card:hover {
-                transform: translateY(-6px) scale(1.01);
-                border-color: rgba(229, 169, 59, 0.3);
-                box-shadow: 0 25px 50px rgba(0,0,0,0.7);
+            .ecosystem-card:hover {
+                transform: translateY(-8px);
+                border-color: rgba(229, 169, 59, 0.35);
+                box-shadow: 0 30px 60px rgba(0,0,0,0.75), 0 0 20px rgba(229, 169, 59, 0.03);
             }
-            .bento-large {
-                grid-column: span 2;
-            }
-            @media (max-width: 992px) {
-                .bento-large { grid-column: span 1; }
-            }
-            /* Thao tác lớp phủ ảnh thông minh để giữ vững độ tương phản chữ */
-            .bento-img-overlay {
+            /* Tech Image Overlay System */
+            .ecosystem-img-overlay {
                 position: absolute;
                 top: 0; left: 0; width: 100%; height: 100%;
                 background-size: cover;
                 background-position: center;
-                /* Tạo mặt nạ tối giảm độ sáng góc ảnh để chữ nổi bật lên */
-                background-image: linear-gradient(to top, rgba(5, 5, 8, 0.95) 30%, rgba(5, 5, 8, 0.6) 100%), var(--bg-img);
-                opacity: 0.35;
-                transition: all 0.5s ease;
+                /* Luxury High-Contrast Gradient Mask */
+                background-image: linear-gradient(135deg, rgba(13, 13, 20, 0.98) 40%, rgba(13, 13, 20, 0.8) 100%), var(--bg-img);
+                opacity: 0.4;
+                transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
                 z-index: 0;
             }
-            .bento-card:hover .bento-img-overlay {
-                opacity: 0.55;
-                transform: scale(1.05);
+            .ecosystem-card:hover .ecosystem-img-overlay {
+                opacity: 0.6;
+                transform: scale(1.06);
             }
-            .bento-card-content {
+            .ecosystem-card-content {
                 position: relative;
                 z-index: 1;
                 height: 100%;
@@ -342,77 +336,78 @@ html(lang='en')
                             h3.h5.font-weight-bold.mb-3(style="letter-spacing: -0.3px;") Strategy Models
                             p.small.mb-0(style="color: var(--text-muted); line-height: 1.6;") Data-informed cross-platform architecture to maximize target audience retention.
 
-        // Portfolio Section (Bento Box Layout)
+        // Ecosystem Section (Tái cấu trúc lưới đối xứng Chuyên nghiệp)
         section#portfolio.page-section(style="background-color: var(--bg-sub); padding: 11rem 0;")
             .container.px-4.px-lg-5
-                .mb-5.pb-3
-                    span.subtitle-vanguard Global Infrastructure
-                    h2.section-title Native Optimization
-                    p.mt-1(style="color: var(--text-muted); font-weight: 300;") Flawless content deployment mechanics across global network ecosystems.
+                .text-center.mb-5.pb-3(style="max-width: 750px; margin: 0 auto;")
+                    span.subtitle-vanguard Platform Architectures
+                    h2.section-title Global Media Ecosystem Optimization
+                    p.mt-2(style="color: var(--text-muted); font-weight: 300;") Flawless content deployment mechanics engineered across global network pipelines.
                 
-                .bento-grid
-                    // YouTube (Khối lớn, có ảnh nền)
-                    .bento-card.bento-large
-                        .bento-img-overlay(style="--bg-img: url('https://images.unsplash.com/photo-1512070679279-8988d32161be?q=80&w=600');")
-                        .bento-card-content.d-flex.flex-column.h-100.justify-content-between
+                .ecosystem-grid
+                    // YouTube (UI Analytics Chìm)
+                    .ecosystem-card
+                        .ecosystem-img-overlay(style="--bg-img: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600');")
+                        .ecosystem-card-content.d-flex.flex-column.h-100.justify-content-between
                             div
                                 i.bi-youtube.fs-1.text-danger.mb-4.d-block
                                 h3.h4.font-weight-bold.mb-3 YouTube Publishing Engine
-                                p(style="color: var(--text-muted); max-width: 500px; font-weight: 300;") Long-form cinematic documentaries, serialized structural formatting, and authority positioning pipelines.
+                                p(style="color: var(--text-muted); font-weight: 300; font-size: 0.95rem; line-height: 1.6;") Long-form cinematic documentaries, serialized structural formatting, and authority positioning pipelines.
                             span.small.mt-4(style="color: var(--accent); font-weight: 700; letter-spacing: 1px;") HIGH-RETENTION SYSTEMS
                     
-                    // TikTok
-                    .bento-card
-                        .bento-card-content.d-flex.flex-column.h-100.justify-content-between
+                    // TikTok (Đồ họa trừu tượng sóng tăng trưởng)
+                    .ecosystem-card
+                        .ecosystem-img-overlay(style="--bg-img: url('https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?q=80&w=600');")
+                        .ecosystem-card-content.d-flex.flex-column.h-100.justify-content-between
                             div
                                 i.bi-tiktok.fs-1.text-white.mb-4.d-block
                                 h3.h4.font-weight-bold.mb-3 TikTok Networks
-                                p(style="color: var(--text-muted); font-weight: 300;") Retentive vertical micro-content mapping and rapid trend forecasting frameworks.
-                            span.small.mt-4(style="color: rgba(255,255,255,0.3); font-weight: 600;") Vertical Engagement
+                                p(style="color: var(--text-muted); font-weight: 300; font-size: 0.95rem; line-height: 1.6;") Retentive vertical micro-content mapping and rapid trend forecasting frameworks.
+                            span.small.mt-4(style="color: rgba(255,255,255,0.4); font-weight: 600; letter-spacing: 0.5px;") Vertical Engagement
                     
-                    // Facebook (Có ảnh nền)
-                    .bento-card
-                        .bento-img-overlay(style="--bg-img: url('https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=600');")
-                        .bento-card-content.d-flex.flex-column.h-100.justify-content-between
-                            div
-                                i.bi-facebook.fs-1.mb-4.d-block(style="color: #1877F2;")
-                                h3.h4.font-weight-bold.mb-3 Facebook Hubs
-                                p(style="color: var(--text-muted); font-weight: 300;") Highly targeted native advertising assets and dynamic broad-reach content pipelines.
-                            span.small.mt-4(style="color: rgba(255,255,255,0.3); font-weight: 600;") Amplified Reach
-                    
-                    // LinkedIn (Khối lớn, có ảnh nền)
-                    .bento-card.bento-large
-                        .bento-img-overlay(style="--bg-img: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=600');")
-                        .bento-card-content.d-flex.flex-column.h-100.justify-content-between
-                            div
-                                i.bi-linkedin.fs-1.mb-4.d-block(style="color: #0077B5;")
-                                h3.h4.font-weight-bold.mb-3 LinkedIn Corporate
-                                p(style="color: var(--text-muted); max-width: 500px; font-weight: 300;") B2B high-value positioning, executive thought leadership assets, and institutional authority framework orchestration.
-                            span.small.mt-4(style="color: var(--accent); font-weight: 700; letter-spacing: 1px;") CORPORATE INFLUENCE
-                    
-                    // Instagram
-                    .bento-card
-                        .bento-card-content.d-flex.flex-column.h-100.justify-content-between
+                    // Instagram (Lưới ảnh Moodboard Nhiếp ảnh gia nghệ thuật)
+                    .ecosystem-card
+                        .ecosystem-img-overlay(style="--bg-img: url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=600');")
+                        .ecosystem-card-content.d-flex.flex-column.h-100.justify-content-between
                             div
                                 i.bi-instagram.fs-1.mb-4.d-block(style="color: #E1306C;")
                                 h3.h4.font-weight-bold.mb-3 Instagram Aesthetics
-                                p(style="color: var(--text-muted); font-weight: 300;") Premium visual design systems and organic high-converting reels structure.
-                            span.small.mt-4(style="color: rgba(255,255,255,0.3); font-weight: 600;") Premium Identity
+                                p(style="color: var(--text-muted); font-weight: 300; font-size: 0.95rem; line-height: 1.6;") Premium visual design systems and organic high-converting reels structure.
+                            span.small.mt-4(style="color: rgba(255,255,255,0.4); font-weight: 600; letter-spacing: 0.5px;") Premium Identity
                     
-                    // Twitter-X (Có ảnh nền)
-                    .bento-card
-                        .bento-img-overlay(style="--bg-img: url('https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=600');")
-                        .bento-card-content.d-flex.flex-column.h-100.justify-content-between
+                    // Facebook (Sơ đồ kết nối Node-Graph đối tượng đối lưu)
+                    .ecosystem-card
+                        .ecosystem-img-overlay(style="--bg-img: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=600');")
+                        .ecosystem-card-content.d-flex.flex-column.h-100.justify-content-between
+                            div
+                                i.bi-facebook.fs-1.mb-4.d-block(style="color: #1877F2;")
+                                h3.h4.font-weight-bold.mb-3 Facebook Hubs
+                                p(style="color: var(--text-muted); font-weight: 300; font-size: 0.95rem; line-height: 1.6;") Highly targeted native advertising assets and dynamic broad-reach content pipelines.
+                            span.small.mt-4(style="color: rgba(255,255,255,0.4); font-weight: 600; letter-spacing: 0.5px;") Amplified Reach
+                    
+                    // LinkedIn (Đồ họa phân tích tài chính/Doanh nghiệp tối)
+                    .ecosystem-card
+                        .ecosystem-img-overlay(style="--bg-img: url('https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=600');")
+                        .ecosystem-card-content.d-flex.flex-column.h-100.justify-content-between
+                            div
+                                i.bi-linkedin.fs-1.mb-4.d-block(style="color: #0077B5;")
+                                h3.h4.font-weight-bold.mb-3 LinkedIn Corporate
+                                p(style="color: var(--text-muted); font-weight: 300; font-size: 0.95rem; line-height: 1.6;") B2B high-value positioning, executive thought leadership assets, and institutional authority framework orchestration.
+                            span.small.mt-4(style="color: var(--accent); font-weight: 700; letter-spacing: 1px;") CORPORATE INFLUENCE
+                    
+                    // Twitter-X (Đường sóng Vector âm thanh/Xu hướng tối giản)
+                    .ecosystem-card
+                        .ecosystem-img-overlay(style="--bg-img: url('https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=600');")
+                        .ecosystem-card-content.d-flex.flex-column.h-100.justify-content-between
                             div
                                 i.bi-twitter-x.fs-1.text-white.mb-4.d-block
                                 h3.h4.font-weight-bold.mb-3 X Narratives
-                                p(style="color: var(--text-muted); font-weight: 300;") Real-time industry authority positioning and direct network engagement assets.
-                            span.small.mt-4(style="color: rgba(255,255,255,0.3); font-weight: 600;") Dynamic Velocity
+                                p(style="color: var(--text-muted); font-weight: 300; font-size: 0.95rem; line-height: 1.6;") Real-time industry authority positioning and direct network engagement assets.
+                            span.small.mt-4(style="color: rgba(255,255,255,0.4); font-weight: 600; letter-spacing: 0.5px;") Dynamic Velocity
 
         // Call to Action with Background Image
         section.page-section.text-white(style="background-image: url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1600'); background-size: cover; background-position: center; position: relative; padding: 12rem 0;")
-            // Lớp phủ tối cho ảnh nền mịn màng hơn
-            .cta-overlay(style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(11,11,15,0.9), rgba(5,5,8,0.95)); z-index: 0;")
+            .cta-overlay(style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(11,11,15,0.95), rgba(5,5,8,0.98)); z-index: 0;")
             .container.px-4.px-lg-5.text-center(style="position: relative; z-index: 1; max-width: 700px;")
                 span.subtitle-vanguard Global Expansion
                 h2.section-title Accelerate Your Global Footprint.
