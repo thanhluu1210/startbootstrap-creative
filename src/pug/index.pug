@@ -16,21 +16,21 @@ html(lang='en')
         // Bootstrap Icons
         link(href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css', rel='stylesheet')
 
-        // Google fonts - Jakarta Sans: Modern & Clean Corporate Font
+        // Google fonts - Jakarta Sans
         link(href='https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:300,400,500,600,700,800', rel='stylesheet')
 
         // Core theme CSS
         link(href='css/styles.css', rel='stylesheet')
 
-        // STYLE INJECTION: PROFESSIONAL LIGHT MODE (MINIMALIST CORPORATE AGENCY)
+        // STYLE INJECTION: PROFESSIONAL LIGHT MODE
         style.
             :root {
                 --bg-main: #ffffff;
-                --bg-sub: #f8fafc; /* Very light slate gray */
+                --bg-sub: #f8fafc;
                 --bg-card: #ffffff;
-                --text-main: #1e293b; /* Deep slate gray */
-                --text-sub: #64748b; /* Medium slate gray */
-                --accent: #d69e2e; /* Subdued Premium Gold/Bronze */
+                --text-main: #1e293b;
+                --text-sub: #64748b;
+                --accent: #d69e2e;
                 --border-light: rgba(0, 0, 0, 0.04);
             }
             body {
@@ -39,7 +39,6 @@ html(lang='en')
                 color: var(--text-main);
                 letter-spacing: -0.01em;
             }
-            /* Custom Scrollbar - Light Mode */
             ::-webkit-scrollbar {
                 width: 6px;
             }
@@ -53,7 +52,6 @@ html(lang='en')
             ::-webkit-scrollbar-thumb:hover {
                 background: var(--accent);
             }
-            /* Navigation - Fixed Light Mode */
             #mainNav {
                 background-color: rgba(255, 255, 255, 0.95) !important;
                 backdrop-filter: blur(10px);
@@ -88,7 +86,6 @@ html(lang='en')
                 color: var(--accent) !important;
                 opacity: 1;
             }
-            /* Hero Masthead - Clean Professional Light */
             .masthead {
                 background: linear-gradient(135deg, rgba(248,250,252,0.6) 0%, rgba(255,255,255,1) 60%), radial-gradient(circle at 80% 20%, rgba(214,158,46,0.03) 0%, rgba(255,255,255,0) 50%) !important;
                 padding: 18rem 0 16rem 0 !important;
@@ -110,7 +107,6 @@ html(lang='en')
             hr.divider, hr.divider-dark {
                 display: none !important;
             }
-            /* Premium Buttons - Clean Corporate Style */
             .btn-xl {
                 padding: 1.25rem 2.5rem !important;
                 font-size: 0.8rem !important;
@@ -141,7 +137,6 @@ html(lang='en')
                 transform: translateY(-3px);
                 border-color: var(--accent) !important;
             }
-            /* Section Titles - Clean Gray Gradient */
             .section-title {
                 font-size: calc(1.8rem + 1vw) !important;
                 font-weight: 800 !important;
@@ -160,7 +155,6 @@ html(lang='en')
                 display: inline-block;
                 margin-bottom: 0.75rem;
             }
-            /* Premium Services Cards - Clean & structured */
             .service-box-card {
                 background: var(--bg-card);
                 border: 1px solid var(--border-light);
@@ -180,7 +174,6 @@ html(lang='en')
                 margin-bottom: 1.8rem;
                 display: inline-block;
             }
-            /* Ecosystem Platform Cards - Replaced murky Bento box */
             .ecosystem-grid {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
@@ -213,7 +206,6 @@ html(lang='en')
                 z-index: 1;
                 height: 100%;
             }
-            /* Contact UI Elements - Clean Gray */
             .contact-block {
                 background: var(--bg-sub);
                 border-radius: 10px;
@@ -262,18 +254,21 @@ html(lang='en')
                         a.btn.btn-neon.btn-xl.me-3(href='#about') Enter Agency
                         a.btn.btn-outline-neon.btn-xl(href='#contact') Schedule Call
 
-        // About Section - Pure White with good whitespace
+        // About Section
         section#about.page-section(style="background-color: var(--bg-main); padding: 12rem 0; border-top: 1px solid var(--border-light);")
             .container.px-4.px-lg-5
                 .row.gx-4.gx-lg-5.align-items-center
                     .col-lg-5.mb-5.mb-lg-0
                         span.subtitle-vanguard Strategic Paradigm
-                        h2.section-title(style="line-height: 1.2;") Cinematic Precision,#[br]Digital Intelligence.
+                        h2.section-title(style="line-height: 1.2;")
+                            | Cinematic Precision,
+                            br
+                            | Digital Intelligence.
                     .col-lg-7
                         p.mb-4(style="color: var(--text-sub); font-size: 1.1rem; line-height: 1.8; font-weight: 300;") Headquartered in London, HAIPHONG MEDIA LTD operates at the convergence of world-class cinematic craftsmanship and vanguard media engineering. We build high-fidelity visual assets, automated content architectures, and retentive media frameworks. 
                         p.mb-0(style="color: var(--text-sub); font-size: 1.1rem; line-height: 1.8; font-weight: 300;") We don't just output video—we establish digital authority, accelerate market reach, and position premium entities to scale seamlessly across global networks.
 
-        // Services Section - light off-white background
+        // Services Section
         section#services.page-section(style="background-color: var(--bg-sub); padding: 12rem 0; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);")
             .container.px-4.px-lg-5
                 .text-center.mb-5(style="max-width: 600px; margin: 0 auto;")
@@ -302,7 +297,7 @@ html(lang='en')
                             h3.h6.font-weight-bold.mb-3(style="letter-spacing: -0.2px; text-transform: uppercase;") Strategy Models
                             p.small.mb-0(style="color: var(--text-sub); line-height: 1.6;") Data-informed cross-platform architecture to maximize target audience retention.
 
-        // Ecosystem Section - Redesigned to clean symmetric grid of defined cards
+        // Ecosystem Section
         section#portfolio.page-section(style="background-color: var(--bg-main); padding: 12rem 0;")
             .container.px-4.px-lg-5
                 .mb-5.pb-3
@@ -311,7 +306,7 @@ html(lang='en')
                     p.mt-1(style="color: var(--text-sub); font-weight: 300;") Flawless content deployment mechanics engineered across global networks.
                 
                 .ecosystem-grid
-                    // YouTube (Clean card)
+                    // YouTube
                     .ecosystem-card
                         .ecosystem-card-content.d-flex.flex-column.h-100.justify-content-between
                             div
@@ -329,7 +324,7 @@ html(lang='en')
                                 p(style="color: var(--text-sub); font-weight: 300; font-size: 0.95rem; line-height: 1.6;") Retentive vertical micro-content mapping and rapid trend forecasting frameworks.
                             span.small.mt-4(style="color: rgba(0,0,0,0.3); font-weight: 600; letter-spacing: 0.5px;") Vertical Engagement
                     
-                    // Facebook (Clean card)
+                    // Facebook
                     .ecosystem-card
                         .ecosystem-card-content.d-flex.flex-column.h-100.justify-content-between
                             div
@@ -338,7 +333,7 @@ html(lang='en')
                                 p(style="color: var(--text-sub); font-weight: 300; font-size: 0.95rem; line-height: 1.6;") Highly targeted native advertising assets and dynamic broad-reach content pipelines.
                             span.small.mt-4(style="color: rgba(0,0,0,0.3); font-weight: 600; letter-spacing: 0.5px;") Amplified Reach
                     
-                    // LinkedIn (Clean card)
+                    // LinkedIn
                     .ecosystem-card
                         .ecosystem-card-content.d-flex.flex-column.h-100.justify-content-between
                             div
@@ -356,7 +351,7 @@ html(lang='en')
                                 p(style="color: var(--text-sub); font-weight: 300; font-size: 0.95rem; line-height: 1.6;") Premium visual design systems and organic high-converting reels structure.
                             span.small.mt-4(style="color: rgba(0,0,0,0.3); font-weight: 600; letter-spacing: 0.5px;") Premium Identity
                     
-                    // Twitter-X (Clean card)
+                    // Twitter-X
                     .ecosystem-card
                         .ecosystem-card-content.d-flex.flex-column.h-100.justify-content-between
                             div
@@ -365,7 +360,7 @@ html(lang='en')
                                 p(style="color: var(--text-sub); font-weight: 300; font-size: 0.95rem; line-height: 1.6;") Real-time industry authority positioning and direct network engagement assets.
                             span.small.mt-4(style="color: rgba(0,0,0,0.3); font-weight: 600; letter-spacing: 0.5px;") Dynamic Velocity
 
-        // Call to Action - Clean Gray background instead of murky mask image
+        // Call to Action
         section.page-section(style="background-color: var(--bg-sub); padding: 10rem 0; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);")
             .container.px-4.px-lg-5.text-center(style="max-width: 700px;")
                 span.subtitle-vanguard Global Expansion
@@ -373,7 +368,7 @@ html(lang='en')
                 p.mt-3.mb-5(style="color: var(--text-sub); font-size: 1.15rem; font-weight: 300; line-height: 1.7;") Partner with our London creative team to architect high-end media pipelines. Initiate your production brief today.
                 a.btn.btn-neon.btn-xl(href='#contact') Initiate Brief
 
-        // Contact Section - form blocks look clean on light gray
+        // Contact Section
         section#contact.page-section(style="background-color: var(--bg-main); padding: 12rem 0;")
             .container.px-4.px-lg-5
                 .row.gx-5.justify-content-between.align-items-center
@@ -399,19 +394,14 @@ html(lang='en')
                                 .contact-block
                                     i.bi-geo-alt.contact-icon.mb-3.d-block
                                     span.small.d-block(style="color: var(--text-sub); text-transform: uppercase; letter-spacing: 1px;") Headquarters
-                                    strong.d-block.mt-2(style="font-weight: 500; font-size: 0.95rem; line-height: 1.6; color: var(--text-main);") 181 Pixton Way, Croydon,#[br]CR0 9JN, United Kingdom
+                                    strong.d-block.mt-2(style="font-weight: 500; font-size: 0.95rem; line-height: 1.6; color: var(--text-main);")
+                                        | 181 Pixton Way, Croydon,
+                                        br
+                                        | CR0 9JN, United Kingdom
 
-        // Footer - Clean on light gray
+        // Footer
         footer.py-5(style="background-color: var(--bg-sub); border-top: 1px solid var(--border-light);")
             .container.px-4.px-lg-5
                 .small.text-center(style="color: var(--text-sub); letter-spacing: 0.3px;") Copyright &copy; 2026 - HAIPHONG MEDIA LTD. All rights reserved. Professional High-End Visual Production House - London.
 
-        script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bundle.min.js')
-```Tôi hiểu ý bạn và sếp của bạn. Thiết kế tối màu (Dark Mode) thường tạo cảm giác cá tính, điện ảnh và công nghệ, nhưng trong môi trường doanh nghiệp (Corporate/Executive) thì thiết kế sáng màu (Light Mode) lại được ưu tiên hơn vì nó tạo ra cảm giác **tin cậy, minh bạch, sạch sẽ và chuyên nghiệp** hơn.
-
-Dưới đây là một số ý tưởng thiết kế site sáng màu và chuyên nghiệp mà tôi đã tổng hợp:
-
-* **Bố cục Airy (Khoảng thở):** Thay đổi lớn nhất không chỉ là màu sắc, mà là cách chúng ta xử lý khoảng trắng (white space). Tôi đã tăng đáng kể khoảng thở giữa các section, các dòng văn bản và xung quanh các thẻ (cards). Điều này tạo cảm giác thoáng đãng, sang trọng và dễ đọc, rất phổ biến ở các trang web agency chuyên nghiệp của Châu Âu.
-* **Tái thiết kế Portfolio Hệ sinh thái (Platforms):** Tôi đã loại bỏ hoàn toàn các Bento Box lộn xộn, murkey (hình ảnh chìm Mask đenmask trên Mask nền mask). Thay vào đó, tôi sử dụng một hệ thống lưới thẻ (Cards) sạch sẽ trên nền trắng, với viền mảnh, bóng đổ cực nhẹ và icon nền tảng rõ ràng. Điều này tạo cảm giác site có cấu trúc, đáng tin cậy và chuyên nghiệp hơn so với việc cố maskMask Mask nhiễu mask ảnh chìm Mask của Mask design cũ mask.
-
-Bạn có thể tham khảo một số mẫu thiết kế trên để có thêm ý tưởng cho trang web của mình. Nếu có bất kỳ câu hỏi nào, xin vui lòng cho tôi biết.
+        script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js')
