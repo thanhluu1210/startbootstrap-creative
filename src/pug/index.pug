@@ -17,150 +17,135 @@ html(lang='en')
         link(href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css', rel='stylesheet')
 
         // Google fonts
-        link(href='https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700', rel='stylesheet')
-        link(href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic', rel='stylesheet', type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:300,400,600,700', rel='stylesheet')
 
-        // SimpleLightbox plugin CSS
-        link(href='https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css', rel='stylesheet')
-
-        // Core theme CSS (includes Bootstrap)
+        // Core theme CSS
         link(href='css/styles.css', rel='stylesheet')
 
-        // High-End Custom Global Overrides (Triệt tiêu hoàn toàn màu cam cũ của template)
+        // STYLE INJECTION: CINEMATIC NEO-NOIR
         style.
-            :root {
-                --luxury-black: #0a0a0c;
-                --luxury-dark: #121215;
-                --luxury-card: #1a1a1e;
-                --luxury-silver: #86868b;
-                --luxury-light: #f5f5f7;
-                --pure-white: #ffffff;
-            }
             body {
-                background-color: var(--luxury-black);
-                color: var(--pure-white);
+                font-family: 'Plus Jakarta Sans', sans-serif !important;
+                background-color: #070709;
+                color: #ffffff;
             }
             #mainNav {
                 background-color: transparent !important;
-                backdrop-filter: blur(20px);
-                -webkit-backdrop-filter: blur(20px);
-                transition: all 0.4s ease;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                backdrop-filter: blur(15px);
+                -webkit-backdrop-filter: blur(15px);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.03);
             }
             #mainNav.navbar-shrink {
-                background-color: rgba(10, 10, 12, 0.95) !important;
-                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+                background-color: rgba(7, 7, 9, 0.95) !important;
             }
             #mainNav .navbar-brand {
-                color: var(--pure-white) !important;
+                color: #ffffff !important;
                 font-weight: 700 !important;
                 letter-spacing: 2px;
             }
             #mainNav .nav-link {
-                color: rgba(255, 255, 255, 0.7) !important;
-                font-weight: 600 !important;
-                letter-spacing: 1px;
+                color: rgba(255, 255, 255, 0.6) !important;
+                font-weight: 500;
                 font-size: 0.85rem;
             }
             #mainNav .nav-link:hover {
-                color: var(--pure-white) !important;
+                color: #e5a93b !important;
             }
             .masthead {
-                background: linear-gradient(180deg, #020202 0%, var(--luxury-dark) 100%) !important;
-                padding-top: 12rem !important;
-                padding-bottom: 12rem !important;
+                background: radial-gradient(circle at top right, #1d153a 0%, #070709 60%) !important;
+                padding: 14rem 0 12rem 0 !important;
             }
-            h1, h2, h3, h4 {
-                letter-spacing: 0.5px !important;
+            h1 {
+                font-size: calc(2rem + 2vw) !important;
+                font-weight: 700 !important;
+                line-height: 1.15;
+                background: linear-gradient(180deg, #ffffff 0%, #a5a5b0 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
-            hr.divider {
-                border-color: var(--pure-white) !important;
-                background-color: var(--pure-white) !important;
-                max-width: 2.5rem !important;
-                height: 1px !important;
-                opacity: 0.3 !important;
-                margin: 2rem auto !important;
-            }
-            hr.divider-dark {
-                border-color: var(--luxury-black) !important;
-                background-color: var(--luxury-black) !important;
-                max-width: 2.5rem !important;
-                height: 1px !important;
-                opacity: 0.2 !important;
-                margin: 2rem auto !important;
+            hr.divider, hr.divider-dark {
+                display: none !important; /* Loại bỏ đường gạch ngang mặc định để tạo khoảng thoáng rộng rãi chuẩn hiện đại */
             }
             .btn-xl {
-                padding: 1.25rem 2.75rem !important;
+                padding: 1.2rem 2.5rem !important;
                 font-size: 0.8rem !important;
                 font-weight: 700 !important;
                 text-transform: uppercase !important;
                 letter-spacing: 2px !important;
-                border-radius: 0px !important;
-                transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+                border-radius: 4px !important;
+                transition: all 0.3s ease !important;
             }
-            .btn-editorial-dark {
-                background-color: var(--luxury-black) !important;
-                color: var(--pure-white) !important;
-                border: 1px solid var(--luxury-black) !important;
+            .btn-neon {
+                background-color: #e5a93b !important;
+                color: #070709 !important;
+                border: none !important;
             }
-            .btn-editorial-dark:hover {
+            .btn-neon:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 10px 25px rgba(229, 169, 59, 0.3);
+            }
+            .btn-outline-neon {
                 background-color: transparent !important;
-                color: var(--luxury-black) !important;
+                color: #ffffff !important;
+                border: 1px solid rgba(255, 255, 255, 0.15) !important;
             }
-            .btn-outline-custom {
-                background-color: transparent !important;
-                color: var(--pure-white) !important;
-                border: 1px solid rgba(255, 255, 255, 0.3) !important;
+            .btn-outline-neon:hover {
+                border-color: #e5a93b !important;
+                color: #e5a93b !important;
             }
-            .btn-outline-custom:hover {
-                border-color: var(--pure-white) !important;
-                background-color: var(--pure-white) !important;
-                color: var(--luxury-black) !important;
+            .section-title {
+                font-size: 2.5rem !important;
+                font-weight: 700 !important;
+                letter-spacing: -0.5px;
             }
-            .service-icon-box {
-                color: var(--luxury-black) !important;
+            /* Bento Grid Layout cho Portfolio */
+            .bento-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.5rem;
+            }
+            @media (max-width: 992px) {
+                .bento-grid { grid-template-columns: repeat(2, 1fr); }
+            }
+            @media (max-width: 576px) {
+                .bento-grid { grid-template-columns: 1fr; }
+            }
+            .bento-card {
+                background: linear-gradient(145deg, #121216 0%, #0d0d11 100%);
+                border: 1px solid rgba(255, 255, 255, 0.03);
+                border-radius: 16px;
+                padding: 2.5rem;
+                transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+            .bento-card:hover {
+                transform: translateY(-5px);
+                border-color: rgba(229, 169, 59, 0.2);
+                box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            }
+            /* Tạo khối to nhỏ khác nhau phá cách */
+            .bento-large {
+                grid-column: span 2;
+            }
+            @media (max-width: 992px) {
+                .bento-large { grid-column: span 1; }
+            }
+            .service-box-card {
+                background-color: #121216;
+                border: 1px solid rgba(255, 255, 255, 0.02);
+                padding: 3rem 2rem;
+                border-radius: 12px;
+            }
+            .service-icon {
                 font-size: 2.5rem;
+                color: #e5a93b;
                 margin-bottom: 1.5rem;
                 display: inline-block;
             }
-            .portfolio-card {
-                background-color: var(--luxury-card);
-                border: 1px solid rgba(255, 255, 255, 0.03);
-                border-radius: 0px;
-                transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-            }
-            .portfolio-card:hover {
-                transform: translateY(-8px);
-                border-color: rgba(255, 255, 255, 0.15);
-                box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
-            }
-            .platform-icon {
-                font-size: 2.25rem;
-                opacity: 0.85;
-                transition: transform 0.3s ease;
-            }
-            .portfolio-card:hover .platform-icon {
-                transform: scale(1.1);
-                opacity: 1;
-            }
-            .contact-card {
-                background-color: var(--luxury-light);
-                border: none;
-                border-radius: 0px;
-                transition: transform 0.3s ease;
-            }
-            .contact-card:hover {
-                transform: translateY(-4px);
-            }
-            .icon-wrapper-contact {
-                width: 50px;
-                height: 50px;
-                background-color: var(--pure-white);
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            .contact-block {
+                background: #121216;
+                border-radius: 12px;
+                padding: 2rem;
+                border: 1px solid rgba(255, 255, 255, 0.02);
             }
 
     body#page-top
@@ -169,7 +154,7 @@ html(lang='en')
         nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top.py-3
             .container.px-4.px-lg-5
                 a.navbar-brand(href='#page-top') HAIPHONG MEDIA LTD
-                button.navbar-toggler.navbar-toggler-right(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation', style='border: none; color: white;')
+                button.navbar-toggler.navbar-toggler-right(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation', style='border: none;')
                     span.navbar-toggler-icon(style='filter: invert(1);')
                 #navbarResponsive.collapse.navbar-collapse
                     ul.navbar-nav.ms-auto.my-2.my-lg-0
@@ -182,172 +167,134 @@ html(lang='en')
                         li.nav-item
                             a.nav-link(href='#contact') Contact
 
-        // Header / Masthead
+        // Masthead
         header.masthead
             .container.px-4.px-lg-5.h-100
                 .row.gx-4.gx-lg-5.h-100.align-items-center.justify-content-center.text-center
                     .col-lg-10.align-self-end
-                        h1.text-white.font-weight-bold(style="font-size: calc(1.8rem + 1.5vw); font-family: 'Merriweather Sans', sans-serif;") VISUAL ARCHITECTURE FOR THE DIGITAL FRONTIER
-                        hr.divider
+                        h1 VISUAL ARCHITECTURE FOR THE DIGITAL FRONTIER
+                        div(style="height: 2rem;")
                     .col-lg-8.align-self-baseline
-                        p.text-white-75.mb-5(style="font-weight: 300; font-size: 1.1rem; letter-spacing: 0.5px; opacity: 0.8; line-height: 1.7;") Executive-level video production, cutting-edge creative technologies, and disruptive platform narratives engineered for the world's most ambitious brands.
-                        a.btn.btn-outline-custom.btn-xl(href='#about') Enter Agency
+                        p.text-white-50.mb-5(style="font-size: 1.15rem; font-weight: 300;") Executive-level video production, cutting-edge creative technologies, and disruptive platform narratives engineered for the world's most ambitious brands.
+                        a.btn.btn-neon.btn-xl.me-3(href='#about') Enter Agency
+                        a.btn.btn-outline-neon.btn-xl(href='#contact') Schedule Call
 
-        // About (Editorial Light Architecture)
-        section#about.page-section(style="background-color: var(--pure-white); color: var(--luxury-black); padding: 9rem 0;")
+        // About
+        section#about.page-section(style="background-color: #0d0d11; padding: 10rem 0;")
             .container.px-4.px-lg-5
-                .row.gx-4.gx-lg-5.justify-content-center
-                    .col-lg-9.text-center
-                        h2.font-weight-bold.mt-0(style="font-size: 2.25rem; font-family: 'Merriweather', serif;") Cinematic Precision meets Digital Intelligence.
-                        hr.divider-dark
-                        p.text-muted.mb-5(style="font-size: 1.15rem; line-height: 1.9; font-weight: 300; text-align: justify; text-align-last: center;") Headquartered in London, HAIPHONG MEDIA LTD operates at the convergence of world-class cinematic craftsmanship and vanguard media engineering. We build high-fidelity visual assets, automated content architectures, and retentive media frameworks. We don't just output video—we establish digital authority and accelerate global market influence.
-                        a.btn.btn-editorial-dark.btn-xl.shadow-sm(href='#services') View Expertise
+                .row.gx-4.gx-lg-5.align-items-center
+                    .col-lg-5
+                        h2.section-title.mb-4(style="line-height: 1.2;") Cinematic Precision, Digital Intelligence.
+                    .col-lg-7
+                        p.text-white-50.mb-4(style="font-size: 1.1rem; line-height: 1.8; font-weight: 300;") Headquartered in London, HAIPHONG MEDIA LTD operates at the convergence of world-class cinematic craftsmanship and vanguard media engineering. We build high-fidelity visual assets, automated content architectures, and retentive media frameworks. 
+                        p.text-white-50.mb-5(style="font-size: 1.1rem; line-height: 1.8; font-weight: 300;") We don't just output video—we establish digital authority, accelerate market reach, and position premium entities to scale seamlessly across global networks.
 
-        // Services (Minimalist Structural Grid)
-        section#services.page-section(style="background-color: var(--luxury-light); color: var(--luxury-black); padding: 9rem 0;")
-            .container.px-4.px-lg-5
-                h2.text-center.font-weight-bold.mt-0(style="font-size: 2.25rem;") Core Capabilities
-                hr.divider-dark
-                .row.gx-4.gx-lg-5
-                    .col-lg-3.col-md-6.text-center
-                        .mt-5
-                            .service-icon-box
-                                i.bi-camera-video
-                            h3.h5.font-weight-bold.mb-3 Video Production
-                            p.text-muted.mb-0.small(style="line-height: 1.7; font-weight: 400;") Premium commercial execution, elite brand documentaries, and bespoke masterwork narratives.
-                    .col-lg-3.col-md-6.text-center
-                        .mt-5
-                            .service-icon-box
-                                i.bi-cpu
-                            h3.h5.font-weight-bold.mb-3 Creative Engineering
-                            p.text-muted.mb-0.small(style="line-height: 1.7; font-weight: 400;") Synthesizing advanced rendering pipelines, next-gen virtual environments, and custom media assets.
-                    .col-lg-3.col-md-6.text-center
-                        .mt-5
-                            .service-icon-box
-                                i.bi-magic
-                            h3.h5.font-weight-bold.mb-3 Advanced Mastering
-                            p.text-muted.mb-0.small(style="line-height: 1.7; font-weight: 400;") High-end color precision grading, seamless visual VFX integrations, and localized sound design.
-                    .col-lg-3.col-md-6.text-center
-                        .mt-5
-                            .service-icon-box
-                                i.bi-graph-up-arrow
-                            h3.h5.font-weight-bold.mb-3 Network Architecture
-                            p.text-muted.mb-0.small(style="line-height: 1.7; font-weight: 400;") Data-informed cross-platform publishing models designed to optimize reach, engagement, and scaling metrics.
-
-        // Portfolio (Premium Obsidian Bento Card Grid)
-        section#portfolio.page-section(style="background-color: var(--luxury-black); padding: 9rem 0;")
+        // Services
+        section#services.page-section(style="background-color: #070709; padding: 10rem 0;")
             .container.px-4.px-lg-5
                 .text-center.mb-5
-                    h2.font-weight-bold.mt-0.text-white Native Optimization
-                    hr.divider
-                    p.text-white-50(style="font-size: 1.05rem; font-weight: 300;") Seamless deployment frameworks across core global digital networks.
+                    h2.section-title Core Capabilities
+                    p.text-white-50.font-weight-light Architectural visual systems tailored for executive deployment.
+                .row.gx-4.gx-lg-5
+                    .col-lg-3.col-md-6.mb-4
+                        .service-box-card.text-center.h-100
+                            i.bi-camera-video.service-icon
+                            h3.h5.font-weight-bold.mb-3 Video Production
+                            p.text-white-50.small.mb-0 Premium commercial execution, elite brand documentaries, and masterwork assets.
+                    .col-lg-3.col-md-6.mb-4
+                        .service-box-card.text-center.h-100
+                            i.bi-cpu.service-icon
+                            h3.h5.font-weight-bold.mb-3 Creative Tech
+                            p.text-white-50.small.mb-0 Synthesizing high-fidelity rendering, advanced virtual animations, and AI workflows.
+                    .col-lg-3.col-md-6.mb-4
+                        .service-box-card.text-center.h-100
+                            i.bi-magic.service-icon
+                            h3.h5.font-weight-bold.mb-3 Post-Mastering
+                            p.text-muted.small.mb-0 High-end precision color spaces, seamless VFX integration, and spatial acoustic design.
+                    .col-lg-3.col-md-6.mb-4
+                        .service-box-card.text-center.h-100
+                            i.bi-graph-up-arrow.service-icon
+                            h3.h5.font-weight-bold.mb-3 Strategy Models
+                            p.text-white-50.small.mb-0 Data-informed cross-platform architecture to maximize target audience retention.
+
+        // Portfolio (Bento Box Layout)
+        section#portfolio.page-section(style="background-color: #0d0d11; padding: 10rem 0;")
+            .container.px-4.px-lg-5
+                .mb-5
+                    h2.section-title Native Optimization
+                    p.text-white-50 Flawless content deployment mechanics across global network ecosystems.
                 
-                .row.gx-4.gx-lg-5.justify-content-center
-                    // YouTube
-                    .col-lg-4.col-md-6.mb-4
-                        .card.portfolio-card.h-100.text-center.p-4
-                            .card-body.d-flex.flex-column.justify-content-center.align-items-center.py-4
-                                i.bi-youtube.platform-icon.text-danger.mb-3
-                                h3.h5.text-white.font-weight-bold.mb-2 YouTube Engine
-                                p.text-muted.small.mb-0(style="font-weight: 300;") Long-form cinematic content and retentive positioning.
-                    
-                    // Facebook
-                    .col-lg-4.col-md-6.mb-4
-                        .card.portfolio-card.h-100.text-center.p-4
-                            .card-body.d-flex.flex-column.justify-content-center.align-items-center.py-4
-                                i.bi-facebook.platform-icon.mb-3(style="color: #1877F2;")
-                                h3.h5.text-white.font-weight-bold.mb-2 Facebook Synergies
-                                p.text-muted.small.mb-0(style="font-weight: 300;") Dynamic commercial campaigns and high-reach scaling.
+                .bento-grid
+                    // YouTube (Khối lớn)
+                    .bento-card.bento-large
+                        .d-flex.flex-column.h-100.justify-content-between
+                            div
+                                i.bi-youtube.fs-1.text-danger.mb-4.d-block
+                                h3.h4.font-weight-bold.mb-3 YouTube Publishing Engine
+                                p.text-white-50 Long-form cinematic documentaries, serialized structural formatting, and authority positioning pipelines.
+                            span.text-white-50.small.mt-4 High-Retention Systems
                     
                     // TikTok
-                    .col-lg-4.col-md-6.mb-4
-                        .card.portfolio-card.h-100.text-center.p-4
-                            .card-body.d-flex.flex-column.justify-content-center.align-items-center.py-4
-                                i.bi-tiktok.platform-icon.text-white.mb-3
-                                h3.h5.text-white.font-weight-bold.mb-2 TikTok Frameworks
-                                p.text-muted.small.mb-0(style="font-weight: 300;") Retentive vertical narrative mapping and rapid micro-production.
+                    .bento-card
+                        i.bi-tiktok.fs-1.text-white.mb-4.d-block
+                        h3.h4.font-weight-bold.mb-3 TikTok Networks
+                        p.text-white-50 Retentive vertical micro-content mapping and rapid trend forecasting frameworks.
+                    
+                    // Facebook
+                    .bento-card
+                        i.bi-facebook.fs-1.mb-4.d-block(style="color: #1877F2;")
+                        h3.h4.font-weight-bold.mb-3 Facebook Hubs
+                        p.text-white-50 Highly targeted native advertising assets and dynamic broad-reach content pipelines.
+                    
+                    // LinkedIn (Khối lớn)
+                    .bento-card.bento-large
+                        .d-flex.flex-column.h-100.justify-content-between
+                            div
+                                i.bi-linkedin.fs-1.mb-4.d-block(style="color: #0077B5;")
+                                h3.h4.font-weight-bold.mb-3 LinkedIn Corporate
+                                p.text-white-50 B2B high-value positioning, executive thought leadership assets, and institutional authority framework orchestration.
+                            span.text-white-50.small.mt-4 Corporate Influence
                     
                     // Instagram
-                    .col-lg-4.col-md-6.mb-4
-                        .card.portfolio-card.h-100.text-center.p-4
-                            .card-body.d-flex.flex-column.justify-content-center.align-items-center.py-4
-                                i.bi-instagram.platform-icon.mb-3(style="color: #E1306C;")
-                                h3.h5.text-white.font-weight-bold.mb-2 Instagram Aesthetics
-                                p.text-muted.small.mb-0(style="font-weight: 300;") Premium visual styling and high-converting reels pipelines.
+                    .bento-card
+                        i.bi-instagram.fs-1.mb-4.d-block(style="color: #E1306C;")
+                        h3.h4.font-weight-bold.mb-3 Instagram Aesthetics
+                        p.text-white-50 Premium visual design systems and organic high-converting reels structure.
                     
                     // Twitter-X
-                    .col-lg-4.col-md-6.mb-4
-                        .card.portfolio-card.h-100.text-center.p-4
-                            .card-body.d-flex.flex-column.justify-content-center.align-items-center.py-4
-                                i.bi-twitter-x.platform-icon.text-white.mb-3
-                                h3.h5.text-white.font-weight-bold.mb-2 X Communications
-                                p.text-muted.small.mb-0(style="font-weight: 300;") Real-time brand positioning and authoritative corporate narratives.
-                    
-                    // LinkedIn
-                    .col-lg-4.col-md-6.mb-4
-                        .card.portfolio-card.h-100.text-center.p-4
-                            .card-body.d-flex.flex-column.justify-content-center.align-items-center.py-4
-                                i.bi-linkedin.platform-icon.mb-3(style="color: #0077B5;")
-                                h3.h5.text-white.font-weight-bold.mb-2 LinkedIn Corporate
-                                p.text-muted.small.mb-0(style="font-weight: 300;") High-value B2B assets and corporate authority influence.
+                    .bento-card
+                        i.bi-twitter-x.fs-1.text-white.mb-4.d-block
+                        h3.h4.font-weight-bold.mb-3 X Narratives
+                        p.text-white-50 Real-time industry authority positioning and direct network engagement assets.
 
-        // Action Section (Sleek Dark Accent)
-        section.page-section.text-white(style="background-color: var(--luxury-dark); padding: 7rem 0; border-top: 1px solid rgba(255,255,255,0.02);")
-            .container.px-4.px-lg-5.text-center
-                h2.mb-4(style="font-weight: 400; letter-spacing: 1px;") Accelerate Your Global Footprint.
-                a.btn.btn-outline-custom.btn-xl(href='#contact') Initiate Production Brief
-
-        // Contact (Elite Studio Form/Data Grid)
-        section#contact.page-section(style="background-color: var(--pure-white); color: var(--luxury-black); padding: 9rem 0;")
+        // Contact
+        section#contact.page-section(style="background-color: #070709; padding: 10rem 0;")
             .container.px-4.px-lg-5
-                .row.gx-4.gx-lg-5.justify-content-center
-                    .col-lg-8.text-center.mb-5
-                        h2.mt-0.font-weight-bold(style="font-size: 2.25rem;") Strategic Engagement
-                        hr.divider-dark
-                        p.text-muted(style="font-size: 1.05rem; font-weight: 400;") Partner with our London creative team to architect high-end media pipelines. Reach out for corporate consulting, bespoke resource packaging, or project bookings.
-                
-                .row.gx-4.gx-lg-5.justify-content-center
-                    // Phone Card
-                    .col-lg-4.col-md-6.mb-4
-                        .card.contact-card.h-100.text-center.p-4
-                            .card-body.d-flex.flex-column.justify-content-center.align-items-center.py-3
-                                .mb-3.icon-wrapper-contact
-                                    i.bi-phone.fs-4(style="color: var(--luxury-black);")
-                                h4.h6.font-weight-bold.mb-2 Direct Line
-                                p.mb-0(style="font-weight: 700; color: var(--luxury-black); letter-spacing: 0.5px;") 07526000056
-                    
-                    // Email Card
-                    .col-lg-4.col-md-6.mb-4
-                        .card.contact-card.h-100.text-center.p-4
-                            .card-body.d-flex.flex-column.justify-content-center.align-items-center.py-3
-                                .mb-3.icon-wrapper-contact
-                                    i.bi-envelope.fs-4(style="color: var(--luxury-black);")
-                                h4.h6.font-weight-bold.mb-2 Corporate Press
-                                p.mb-0
-                                    a.text-decoration-none(href='mailto:contact@haiphongmedialtd.com', style="font-weight: 700; color: var(--luxury-black);") contact@haiphongmedialtd.com
-                    
-                    // Address Card
-                    .col-lg-4.col-md-8.mb-4
-                        .card.contact-card.h-100.text-center.p-4
-                            .card-body.d-flex.flex-column.justify-content-center.align-items-center.py-3
-                                .mb-3.icon-wrapper-contact
-                                    i.bi-geo-alt.fs-4(style="color: var(--luxury-black);")
-                                h4.h6.font-weight-bold.mb-2 HQ Presence
-                                p.text-muted.mb-0.small(style="font-weight: 500; line-height: 1.5;") 181 Pixton Way, Croydon, CR0 9JN, United Kingdom
+                .row.gx-4.gx-lg-5.justify-content-between.align-items-center
+                    .col-lg-5.mb-5.mb-lg-0
+                        h2.section-title Strategic Engagement
+                        p.text-white-50.mt-3 Architect your brand's digital dominance with our London creative facility. Contact us for bespoke pricing structures or active project bookings.
+                    .col-lg-6
+                        .row
+                            .col-md-6.mb-4
+                                .contact-block
+                                    i.bi-phone.fs-3.text-white.mb-2.d-block
+                                    span.text-white-50.small.d-block Direct Line
+                                    strong.d-block.mt-1 07526000056
+                            .col-md-6.mb-4
+                                .contact-block
+                                    i.bi-envelope.fs-3.text-white.mb-2.d-block
+                                    span.text-white-50.small.d-block Global Press
+                                    a.text-decoration-none.text-white.font-weight-bold.d-block.mt-1(href='mailto:contact@haiphongmedialtd.com') contact@haiphongmedialtd.com
+                            .col-12
+                                .contact-block
+                                    i.bi-geo-alt.fs-3.text-white.mb-2.d-block
+                                    span.text-white-50.small.d-block Headquarters
+                                    strong.d-block.mt-1 181 Pixton Way, Croydon, CR0 9JN, United Kingdom
 
         // Footer
-        footer.py-4(style="background-color: var(--luxury-light); border-top: 1px solid #e9ecef;")
+        footer.py-4(style="background-color: #070709; border-top: 1px solid rgba(255,255,255,0.02);")
             .container.px-4.px-lg-5
-                .small.text-center.text-muted(style="font-weight: 500; letter-spacing: 0.5px;") Copyright &copy; 2026 - HAIPHONG MEDIA LTD
+                .small.text-center.text-white-50 Copyright &copy; 2026 - HAIPHONG MEDIA LTD
 
-        // Bootstrap core JS
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js')
-
-        // SimpleLightbox plugin JS
-        script(src='https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js')
-
-        // Core theme JS
-        script(src='js/scripts.js')
-
-        // SB Forms JS
-        script(src='https://cdn.startbootstrap.com/sb-forms-latest.js')
