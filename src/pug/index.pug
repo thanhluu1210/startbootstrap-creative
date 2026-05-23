@@ -13,7 +13,7 @@ html(lang='en')
         // Favicon
         link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
 
-        // Bootstrap Icons
+        // Bootstrap Icons (Đã nâng cấp lên v1.11.3 để hiển thị đầy đủ icon mới)
         link(href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css', rel='stylesheet')
 
         // Google fonts
@@ -97,58 +97,52 @@ html(lang='en')
                             h3.h4.mb-2 Media Strategy
                             p.text-muted.mb-0 Optimizing content delivery strategies across digital platforms to drive explosive engagement and organic growth.
 
-        // Portfolio
+        // Portfolio (Đã được thay thế bằng lưới logo trừu tượng YouTube, Facebook, TikTok...)
         #portfolio
             .container-fluid.p-0
                 .row.g-0
+                    // Khối 1: YouTube
                     .col-lg-4.col-sm-6
-                        a.portfolio-box(href='assets/img/portfolio/fullsize/1.jpg', title='Project Name')
-                            img.img-fluid(src='assets/img/portfolio/thumbnails/1.jpg', alt='...')
-                            .portfolio-box-caption
-                                .project-category.text-white-50
-                                    | Category
-                                .project-name
-                                    | Project Name
-                    .col-lg-4.col-sm-6
-                        a.portfolio-box(href='assets/img/portfolio/fullsize/2.jpg', title='Project Name')
-                            img.img-fluid(src='assets/img/portfolio/thumbnails/2.jpg', alt='...')
-                            .portfolio-box-caption
-                                .project-category.text-white-50
-                                    | Category
-                                .project-name
-                                    | Project Name
-                    .col-lg-4.col-sm-6
-                        a.portfolio-box(href='assets/img/portfolio/fullsize/3.jpg', title='Project Name')
-                            img.img-fluid(src='assets/img/portfolio/thumbnails/3.jpg', alt='...')
-                            .portfolio-box-caption
-                                .project-category.text-white-50
-                                    | Category
-                                .project-name
-                                    | Project Name
-                    .col-lg-4.col-sm-6
-                        a.portfolio-box(href='assets/img/portfolio/fullsize/4.jpg', title='Project Name')
-                            img.img-fluid(src='assets/img/portfolio/thumbnails/4.jpg', alt='...')
-                            .portfolio-box-caption
-                                .project-category.text-white-50
-                                    | Category
-                                .project-name
-                                    | Project Name
-                    .col-lg-4.col-sm-6
-                        a.portfolio-box(href='assets/img/portfolio/fullsize/5.jpg', title='Project Name')
-                            img.img-fluid(src='assets/img/portfolio/thumbnails/5.jpg', alt='...')
-                            .portfolio-box-caption
-                                .project-category.text-white-50
-                                    | Category
-                                .project-name
-                                    | Project Name
-                    .col-lg-4.col-sm-6
-                        a.portfolio-box(href='assets/img/portfolio/fullsize/6.jpg', title='Project Name')
-                            img.img-fluid(src='assets/img/portfolio/thumbnails/6.jpg', alt='...')
+                        .portfolio-item.d-flex.align-items-center.justify-content-center.bg-youtube(style="background-color: #FF0000; color: white;")
+                            i.bi-youtube.fs-1.p-5.opacity-75
                             .portfolio-box-caption.p-3
-                                .project-category.text-white-50
-                                    | Category
-                                .project-name
-                                    | Project Name
+                                .project-category.text-white-50 Platform
+                                .project-name.text-white YouTube
+                    // Khối 2: Facebook
+                    .col-lg-4.col-sm-6
+                        .portfolio-item.d-flex.align-items-center.justify-content-center.bg-facebook(style="background-color: #1877F2; color: white;")
+                            i.bi-facebook.fs-1.p-5.opacity-75
+                            .portfolio-box-caption.p-3
+                                .project-category.text-white-50 Platform
+                                .project-name.text-white Facebook
+                    // Khối 3: TikTok
+                    .col-lg-4.col-sm-6
+                        .portfolio-item.d-flex.align-items-center.justify-content-center.bg-tiktok(style="background-color: #000000; color: white;")
+                            i.bi-tiktok.fs-1.p-5.opacity-75
+                            .portfolio-box-caption.p-3
+                                .project-category.text-white-50 Platform
+                                .project-name.text-white TikTok
+                    // Khối 4: Instagram
+                    .col-lg-4.col-sm-6
+                        .portfolio-item.d-flex.align-items-center.justify-content-center.bg-instagram(style="background-color: #E1306C; color: white;")
+                            i.bi-instagram.fs-1.p-5.opacity-75
+                            .portfolio-box-caption.p-3
+                                .project-category.text-white-50 Platform
+                                .project-name.text-white Instagram
+                    // Khối 5: Twitter-X
+                    .col-lg-4.col-sm-6
+                        .portfolio-item.d-flex.align-items-center.justify-content-center.bg-twitter(style="background-color: #1DA1F2; color: white;")
+                            i.bi-twitter-x.fs-1.p-5.opacity-75
+                            .portfolio-box-caption.p-3
+                                .project-category.text-white-50 Platform
+                                .project-name.text-white Twitter / X
+                    // Khối 6: LinkedIn
+                    .col-lg-4.col-sm-6
+                        .portfolio-item.d-flex.align-items-center.justify-content-center.bg-linkedin(style="background-color: #0077B5; color: white;")
+                            i.bi-linkedin.fs-1.p-5.opacity-75
+                            .portfolio-box-caption.p-3
+                                .project-category.text-white-50 Platform
+                                .project-name.text-white LinkedIn
 
         // Call to action
         section.page-section.bg-dark.text-white
@@ -156,45 +150,42 @@ html(lang='en')
                 h2.mb-4 Ready to scale your brand's presence?
                 a.btn.btn-light.btn-xl(href='#contact') Contact Us Now!
 
-        // Contact (Đã được redesign chuyên nghiệp bằng hệ thống Grid Card đồng bộ)
+        // Contact
         section#contact.page-section.bg-light
             .container.px-4.px-lg-5
                 .row.gx-4.gx-lg-5.justify-content-center
-                    .col-lg-8.col-xl-7.text-center.mb-5
-                        h2.mt-0.font-weight-bold Let's Create Something Extraordinary Together!
-                        hr.divider.my-4
-                        p.text-muted.fs-5 Ready to elevate your digital presence? Get in touch with our team today for consultations, quotes, and creative collaborations.
-                
+                    .col-lg-8.col-xl-6.text-center
+                        h2.mt-0 Let's Create Something Extraordinary Together!
+                        hr.divider
+                        p.text-muted.mb-5 Ready to elevate your digital presence? Get in touch with our team today for consultations, quotes, and creative collaborations.
                 .row.gx-4.gx-lg-5.justify-content-center
                     // Phone Card
                     .col-lg-4.col-md-6.mb-4
-                        .card.border-0.shadow-sm.h-100.text-center.p-4.rounded-3
+                        .card.border-0.shadow.h-100.text-center.p-4
                             .card-body.d-flex.flex-column.justify-content-center.align-items-center
                                 .mb-3.bg-white.shadow-sm.rounded-circle.d-flex.align-items-center.justify-content-center(style="width: 60px; height: 60px;")
-                                    i.bi-telephone.fs-3.text-primary
-                                h4.h5.font-weight-bold.mb-2 Call Us
-                                p.text-secondary.mb-0.font-weight-bold 07526000056
-                    
+                                    i.bi-phone.fs-3.text-primary
+                                h4.h5.font-weight-bold Call Us
+                                p.text-secondary.mb-0 07526000056
                     // Email Card
                     .col-lg-4.col-md-6.mb-4
-                        .card.border-0.shadow-sm.h-100.text-center.p-4.rounded-3
+                        .card.border-0.shadow.h-100.text-center.p-4
                             .card-body.d-flex.flex-column.justify-content-center.align-items-center
                                 .mb-3.bg-white.shadow-sm.rounded-circle.d-flex.align-items-center.justify-content-center(style="width: 60px; height: 60px;")
                                     i.bi-envelope.fs-3.text-primary
-                                h4.h5.font-weight-bold.mb-2 Email Us
+                                h4.h5.font-weight-bold Email Us
                                 p.mb-0
-                                    a.text-decoration-none.text-primary.font-weight-bold(href='mailto:contact@haiphongmedialtd.com') contact@haiphongmedialtd.com
-                    
+                                    a.font-weight-bold(href='mailto:contact@haiphongmedialtd.com') contact@haiphongmedialtd.com
                     // Address Card
                     .col-lg-4.col-md-8.mb-4
-                        .card.border-0.shadow-sm.h-100.text-center.p-4.rounded-3
+                        .card.border-0.shadow.h-100.text-center.p-4
                             .card-body.d-flex.flex-column.justify-content-center.align-items-center
                                 .mb-3.bg-white.shadow-sm.rounded-circle.d-flex.align-items-center.justify-content-center(style="width: 60px; height: 60px;")
                                     i.bi-geo-alt.fs-3.text-primary
-                                h4.h5.font-weight-bold.mb-2 Our Office
+                                h4.h5.font-weight-bold Our Office
                                 p.text-muted.mb-0.small 181 Pixton Way, Croydon, CR0 9JN, United Kingdom
 
-        // Footer
+        // Footer (Đổi py-5 thành pb-5 và để mặc định .bg-light để tạo khối lớn kết nối mượt mà)
         footer.bg-light.pb-5
             .container.px-4.px-lg-5
                 .small.text-center.text-muted Copyright &copy; 2026 - HAIPHONG MEDIA LTD
